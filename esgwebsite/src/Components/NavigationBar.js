@@ -43,7 +43,7 @@ export default class NavigationBar extends Component {
         </Menu.Item>
 
         <Menu.Item
-        as={NavLink} to="/"
+        as={NavLink} to="/home"
           name='home'
           active={activeItem === 'home'}
           onClick={this.handleItemClick}
