@@ -3,6 +3,7 @@ import './App.css';
 import Header from './Components/Header.js';
 import NavigationBar from './Components/NavigationBar.js'
 import About from './Components/Tabs/About/About.js';
+import Event from './Components/Tabs/Events/Events.js'
 import {Route } from 'react-router-dom';
 import {BrowserRouter as Router} from 'react-router-dom';
 
@@ -31,7 +32,7 @@ function App() {
           path="/events"
           exact
           render={() => 
-          <div>events</div>}
+          <Event/>}
         />
 
           <Route
