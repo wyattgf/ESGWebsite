@@ -1,4 +1,3 @@
-import React, { Component }  from 'react';
 import Article from './Article';
 
 export default class ArticleTwo extends Article {
@@ -77,11 +76,9 @@ export default class ArticleTwo extends Article {
         ["Section 9. Class President",this.CLASS],
     
     ]);
-    render(){
-        return(
-           <div className='constPopup'>
-               {this.handleMap(this.SECTIONS)} 
-           </div>
-        ) 
+    
+    constructor(){
+        super();
+        this.setSections(this.SECTIONS);
     }
 }

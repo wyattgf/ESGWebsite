@@ -1,28 +1,16 @@
-import React, { Component }  from 'react';
-import {List} from 'semantic-ui-react';
+import Article from './Article';
 
-export default class ArticleThree extends Component {
+export default class ArticleThree extends Article {
+    SECTION1 = [
+        "ESG shall assign a committee (the Academic Action Committee) devoted to improving the academic condition of the student experience."
+    ]
+
+    SECTIONS = new Map([
+        ["Section 1.",this.SECTION1], 
+    ]);
     
-
-    render(){
-        return(
-           <div className='constPopup'>
-               <h2>Section 1. Voting</h2>
-               <List ordered>
-                    <List.Item >
-                    
-                    </List.Item>
-                    
-                </List>
-                <h2>Section 2. </h2>
-                <List ordered>
-                    <List.Item>
-                    
-                    </List.Item>
-                    
-
-                </List>
-           </div>
-        ) 
+    constructor(){
+        super();
+        this.setSections(this.SECTIONS);
     }
 }
