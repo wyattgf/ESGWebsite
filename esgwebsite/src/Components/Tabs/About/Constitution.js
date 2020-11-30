@@ -1,6 +1,7 @@
 import React, { Component }  from 'react';
 import {Segment, Popup, Card} from 'semantic-ui-react';
 import ArticleOne from './ConstitutionArticles/ArticleOne'
+import ArticleTwo from './ConstitutionArticles/ArticleTwo'
 import "../../../index.css"
 
 export default class Constitution extends Component {
@@ -17,7 +18,7 @@ export default class Constitution extends Component {
                 >
                 </Popup>
                 <Popup
-                    content={<ArticleOne />}
+                    content={<ArticleTwo />}
                     on='click'
                     pinned
                     trigger={<Card><Card.Header>Article II. Duties and Powers of Officers</Card.Header></Card>}
