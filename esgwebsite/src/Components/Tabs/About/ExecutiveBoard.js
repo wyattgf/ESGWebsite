@@ -21,8 +21,11 @@ execBoardCards = [];
     ["James Zheng",2023,"Secretary","james.zheng@duke.edu","HARDEST first-year engineering schedule","jameszheng.png"],
     ["Wyatt Focht",2023,"Director of Technology and Communications","wgf6@duke.edu","GREAT at coming up with fun facts","wyattfocht.png"],
     ["Matthew Jaynes",2022,"Director of Industry Relations","matthew.jaynes@duke.edu","Sometimes wears a backwards hat","matthewjaynes.jpg"],
-    ["Wyatt Focht",2023,"Director of Technology and Communications","wgf6@duke.edu","Is a Pussy","wyattfocht.png"],
-    ["Wyatt Focht",2023,"Director of Technology and Communications","wgf6@duke.edu","Is a Pussy","wyattfocht.png"],
+    ["Alexa Tannebaum",2021,"Chief Marketing Officer","alexa.tannebaum@duke.edu","Thinks she's famous from Three Peas in the Pod","alexatannebaum.jpg"],
+    ["Claire Szuter",2022,"E-Ball/E-Picnic Chair","claire.szuter@duke.edu","Took her until freshman spring to join ESG","claireszuter.png"],
+    ["Kunal Upadya",2021,"Class of 2021 President","kunal.upadya@duke.edu","Insists Gates House is the best dorm","kunalupadya.png"],
+    ["Bennett David",2022,"Class of 2022 President","bennett.david@duke.edu","Told the freshman that Trinity could votefor ESG","bennettdavid.png"],
+    ["Parker Vakili",2023,"Class of 2023 President","parker.vakili@duke.edu","EGR 101's #1 Fan","parkervakili.png"]
     
   ]
 
