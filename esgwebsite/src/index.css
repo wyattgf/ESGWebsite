@@ -58,16 +58,20 @@ List.Item {
 
 .head {
   padding-top: 5%;
+  padding-left: 5%;
   text-align: center;
-  height:150px;
-  background-image: url("./data/images/header.jpg");
+  height:250px;
+  background-image: url("./data/images/equad.jpeg");
 }
 
 .headerText{
-  background-color: rgb(190, 195, 196);
+  
   display: inline-block;
+  -webkit-text-stroke: white;
+  -webkit-text-stroke-width: 1px;
+  font-size: larger;
 }
 
-.body{
+.tab{
   height: 1000px;
 }
