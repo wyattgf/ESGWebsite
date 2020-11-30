@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
-import { Grid, Menu, Segment } from 'semantic-ui-react'
+import { Grid, Menu } from 'semantic-ui-react'
 import AboutContent from './AboutContent'
 import ExecutiveBoard from './ExecutiveBoard'
+import Constitution from './Constitution'
 
 export default class About extends Component {
   state = { activeItem: 'About', activeElement:<AboutContent/> }
@@ -22,10 +23,10 @@ export default class About extends Component {
     this.setState({activeElement:<ExecutiveBoard/>});
           break;
         case "Constitution and Bylaws":
-    this.setState({activeElement:<div>const</div>});
+    this.setState({activeElement:<Constitution/>});
         break;
         default:
-    this.setState({activeElement:<div>default</div>});
+    this.setState({activeElement:<AboutContent/>});
       }
   }
 
@@ -34,7 +35,7 @@ export default class About extends Component {
 
     return (
       <Grid>
-        <Grid.Column width={4}>
+        <Grid.Column width={3}>
           <Menu fluid vertical tabular>
             <Menu.Item
               name='About'
@@ -56,9 +57,9 @@ export default class About extends Component {
         </Grid.Column>
 
         <Grid.Column stretched width={12}>
-          <Segment>
+          
           {this.state.activeElement}
-          </Segment>
+          
         </Grid.Column>
         
       </Grid>
