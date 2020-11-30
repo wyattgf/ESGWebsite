@@ -48,3 +48,26 @@ List.Item {
 .article {
   height: 50px;
 }
+
+.footer {
+  padding-top: 3%;
+  background-color: rgb(55, 132, 157);
+  height: 100px;
+  text-align: center;
+}
+
+.head {
+  padding-top: 5%;
+  text-align: center;
+  height:150px;
+  background-image: url("./data/images/header.jpg");
+}
+
+.headerText{
+  background-color: rgb(190, 195, 196);
+  display: inline-block;
+}
+
+.body{
+  height: 1000px;
+}
