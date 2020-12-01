@@ -4,7 +4,9 @@ export default class Footer extends Component {
 
     render(){
         return(
-            <h3 className='footer'>Questions? Concerns? Ideas?  Contact our email: esgduke@gmail.com</h3>
+            <div className='footer'>
+            <h3 >Questions? Concerns? Ideas?  Contact our email: esgduke@gmail.com</h3>
+            </div>
         )
     }
 }

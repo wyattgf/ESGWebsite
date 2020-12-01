@@ -41,7 +41,7 @@ export default class Events extends Component {
       <div className='tabContent'>
       <Grid>
         <Grid.Column width={3}>
-          <Menu fluid vertical tabular>
+        <Menu secondary fluid vertical >
             <Menu.Item
               name='E-Socials'
               active={activeItem === 'E-Socials'}

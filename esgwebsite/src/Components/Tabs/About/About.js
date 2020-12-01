@@ -37,7 +37,7 @@ export default class About extends Component {
       <div className='tabContent'>
       <Grid >
         <Grid.Column width={3}>
-          <Menu fluid vertical tabular>
+          <Menu secondary fluid vertical >
             <Menu.Item
               name='About'
               active={activeItem === 'About'}

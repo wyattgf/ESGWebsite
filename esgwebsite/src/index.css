@@ -51,9 +51,10 @@ List.Item {
 
 .footer {
   padding-top: 3%;
-  background-color: rgb(55, 132, 157);
+  background-color:  rgb(245,245,245);
   height: 100px;
   text-align: center;
+ 
 }
 
 .head {
@@ -77,14 +78,21 @@ List.Item {
   padding-left: 1%;
   padding-right: 1%;
   height: 100%;
+  background-color: rgb(245,245,245);
 }
 
 .navBar {
   padding-top: 1%;
   padding-bottom: 1%;
+  background-color: 	rgb(245,245,245);
 }
 
 .center {
   margin:auto;
   text-align: center;
+}
+
+* {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 1rem;
 }
