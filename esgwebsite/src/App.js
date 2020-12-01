@@ -11,10 +11,9 @@ import {BrowserRouter as Router} from 'react-router-dom';
 function App() {
   return (
     <div >
-      <Header/>
       <Router>
-      <NavigationBar />
-
+        <NavigationBar/>
+      <Header/>
         <Route
           path="/home"
           exact
