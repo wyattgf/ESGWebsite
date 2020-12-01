@@ -5,11 +5,12 @@ import { NavLink } from 'react-router-dom'
 
 
 export default class NavigationBar extends Component {
-  state = { activeItem: 'home' };
+  state = { activeItem: 'Nada' };
 
    tabColors = ['red', 'orange', 'yellow', 'green', 'blue', 'purple']
    tabIcons = ['info','birthday cake','phone', 'home', 'folder open', 'handshake']
    tabNames = ['About','Events','Contact','Home', 'Student Resources', 'Partner With Pratt']
+   tabLinks = ['about','events','contact','home','studentResources','partnerWithPratt']
 
   handleItemClick = (e, { name }) => this.setState({ activeItem: name });
 
@@ -19,7 +20,7 @@ export default class NavigationBar extends Component {
     for (var i = 0; i < this.tabNames.length; i++){
       tabs[i] = (
         <Menu.Item
-              as={NavLink} to={this.createLink(this.tabNames[i])}
+              as={NavLink} to={this.createLink(this.tabLinks[i])}
               name={this.tabNames[i]}
               active={activeItem === this.tabNames[i]}
               onClick={this.handleItemClick}
@@ -38,8 +39,6 @@ export default class NavigationBar extends Component {
   }
 
   render() {
-    const { activeItem } = this.state;
-
     return (
       <div className='navBar'>
       <Menu secondary className="navigationBar">

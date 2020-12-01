@@ -15,7 +15,7 @@ function App() {
         <NavigationBar/>
       <Header/>
         <Route
-          path="/home"
+          path="/"
           exact
           render={() => 
           <div>home</div>}
