@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import Header from './Components/Header.js';
 import Footer from './Components/Footer.js'
+import Contact from './Components/Tabs/Contact/Contact.js'
 import NavigationBar from './Components/NavigationBar.js'
 import About from './Components/Tabs/About/About.js';
 import Event from './Components/Tabs/Events/Events.js'
@@ -39,7 +40,7 @@ function App() {
           path="/contact"
           exact
           render={() => 
-          <div>contact</div>}
+          <Contact/>}
         />
 
       

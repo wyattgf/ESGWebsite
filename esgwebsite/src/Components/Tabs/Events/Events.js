@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Grid, Menu } from 'semantic-ui-react'
+import { Grid, Menu, Segment } from 'semantic-ui-react'
 import ESocials from './ESocials'
 import EPicnics from './EPicnics'
 import ESocialSponsorship from './ESocialSponsorship'
@@ -66,9 +66,9 @@ export default class Events extends Component {
         </Grid.Column>
 
         <Grid.Column stretched width={12}>
-          
+          <Segment>
           {this.state.activeElement}
-          
+          </Segment>
         </Grid.Column>
         
       </Grid>

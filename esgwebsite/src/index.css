@@ -83,3 +83,8 @@ List.Item {
   padding-top: 1%;
   padding-bottom: 1%;
 }
+
+.center {
+  margin:auto;
+  text-align: center;
+}
