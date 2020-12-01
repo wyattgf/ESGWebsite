@@ -34,7 +34,8 @@ export default class About extends Component {
     const { activeItem } = this.state
 
     return (
-      <Grid>
+      
+      <Grid >
         <Grid.Column width={3}>
           <Menu fluid vertical tabular>
             <Menu.Item

@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import Header from './Components/Header.js';
+import Footer from './Components/Footer.js'
 import NavigationBar from './Components/NavigationBar.js'
 import About from './Components/Tabs/About/About.js';
 import {Route } from 'react-router-dom';
@@ -8,7 +9,7 @@ import {BrowserRouter as Router} from 'react-router-dom';
 
 function App() {
   return (
-    <div>
+    <div >
       <Header/>
       <Router>
       <NavigationBar />
@@ -59,6 +60,7 @@ function App() {
 
         
       </Router>
+      <Footer/>
     </div>
   );
 }

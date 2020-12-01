@@ -1,11 +1,10 @@
-import React from 'react'
+import React, { Component } from 'react'
 
-function Header() {
-  return (
-    <div>
-      <h1>Filler</h1>
-    </div>
-  )
+export default class Header extends Component {
+
+    render(){
+        return(
+            <h1 className='head'><div className='headerText'>Engineering Student Government {'\n'} @ Duke University</div></h1>
+        )
+    }
 }
-
-export default Header

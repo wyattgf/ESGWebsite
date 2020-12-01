@@ -48,3 +48,30 @@ List.Item {
 .article {
   height: 50px;
 }
+
+.footer {
+  padding-top: 3%;
+  background-color: rgb(55, 132, 157);
+  height: 100px;
+  text-align: center;
+}
+
+.head {
+  padding-top: 5%;
+  padding-left: 5%;
+  text-align: center;
+  height:250px;
+  background-image: url("./data/images/equad.jpeg");
+}
+
+.headerText{
+  
+  display: inline-block;
+  -webkit-text-stroke: white;
+  -webkit-text-stroke-width: 1px;
+  font-size: larger;
+}
+
+.tab{
+  height: 1000px;
+}
