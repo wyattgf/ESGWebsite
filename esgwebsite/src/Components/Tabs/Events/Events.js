@@ -38,6 +38,7 @@ export default class Events extends Component {
     const { activeItem } = this.state
 
     return (
+      <div className='tabContent'>
       <Grid>
         <Grid.Column width={3}>
           <Menu fluid vertical tabular>
@@ -71,6 +72,7 @@ export default class Events extends Component {
         </Grid.Column>
         
       </Grid>
+      </div>
     )
   }
 }

@@ -57,7 +57,7 @@ List.Item {
 }
 
 .head {
-  padding-top: 5%;
+  padding-top: 7%;
   padding-left: 5%;
   text-align: center;
   height:250px;
@@ -72,10 +72,13 @@ List.Item {
   font-size: larger;
 }
 
-.tab{
-  height: 1000px;
+.tabContent{
+  padding-top: 1%;
+  padding-left: 1%;
+  padding-right: 1%;
 }
 
 .navBar {
   padding-top: 1%;
+  padding-bottom: 1%;
 }

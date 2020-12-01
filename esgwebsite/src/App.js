@@ -25,7 +25,7 @@ function App() {
           path="/about"
           exact
           render={() => 
-          <About/>}
+          <About className='tab'/>}
         />
 
         <Route
