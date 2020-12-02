@@ -45,12 +45,16 @@ constructor(props){
         </Card.Meta>
         <Card.Description>
             Position: {title} <br></br>
-            Email: <a href="mailto:{email}" target="_blank">{email}</a> <br></br>
+            Email: <a rel="noopener noreferrer" href={this.createEmail(email)} target="_blank">{email}</a> <br></br>
             Fun Fact: {fact}<br></br>
         </Card.Description>
         </Card.Content>
     </Card>
     )
+}
+
+createEmail(email){
+    return ('mailto:' + email);
 }
 
     createCards(){

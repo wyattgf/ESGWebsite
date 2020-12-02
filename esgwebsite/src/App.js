@@ -6,15 +6,19 @@ import Contact from './Components/Tabs/Contact/Contact.js'
 import NavigationBar from './Components/NavigationBar.js'
 import About from './Components/Tabs/About/About.js';
 import Event from './Components/Tabs/Events/Events.js'
+import Animation from './Components/Animation.js'
 import {Route } from 'react-router-dom';
 import {BrowserRouter as Router} from 'react-router-dom';
+import {Container} from 'semantic-ui-react';
 
 function App() {
   return (
     <div >
       <Router>
         <NavigationBar/>
-      <Header/>
+        <Container fluid style={{ padding: 0 }}><Animation>WYATT</Animation></Container>
+      
+    
         <Route
           path="/"
           exact

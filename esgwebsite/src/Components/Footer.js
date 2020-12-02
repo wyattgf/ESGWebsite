@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import {Icon} from 'semantic-ui-react'
 
 export default class Footer extends Component {
 
