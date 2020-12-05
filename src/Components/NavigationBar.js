@@ -10,7 +10,7 @@ export default class NavigationBar extends Component {
    tabColors = ['red', 'orange', 'yellow', 'green', 'blue', 'purple']
    tabIcons = ['info','birthday cake','phone', 'home', 'folder open', 'handshake']
    tabNames = ['About','Events','Contact','Home', 'Student Resources', 'Partner With Pratt']
-   tabLinks = ['about','events','contact','home','studentResources','partnerWithPratt']
+   tabLinks = ['about','events','contact','','studentResources','partnerWithPratt']
 
   handleItemClick = (e, { name }) => this.setState({ activeItem: name });
 

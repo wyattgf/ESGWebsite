@@ -79,9 +79,11 @@ createEmail(email){
         }
 
         return(
+
             <Table>
                {rows}
             </Table>
+
         )
     }
 

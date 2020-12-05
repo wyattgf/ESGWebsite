@@ -58,9 +58,9 @@ export default class About extends Component {
         </Grid.Column>
 
         <Grid.Column stretched width={12}>
-          
+
           {this.state.activeElement}
-          
+
         </Grid.Column>
         
       </Grid>

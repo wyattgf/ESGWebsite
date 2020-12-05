@@ -21,7 +21,7 @@ function App() {
       
     
         <Route
-          path="/home"
+          path="/"
           exact
           render={() => 
           <Home/>}
