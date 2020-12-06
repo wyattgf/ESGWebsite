@@ -82,6 +82,7 @@ export default class FirstSemesterCourses extends GridColumnSections {
                     </GridColumn>
                     
                 </GridRow>
+               
             </Grid>
           </div>
         );
