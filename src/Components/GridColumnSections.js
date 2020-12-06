@@ -6,6 +6,7 @@ import {Grid, GridColumn, GridRow} from 'semantic-ui-react';
 export default class GridColumnSections extends Component {
   sectionMap = new Map();
   columnsPerRow = 1;
+  classNombre = 'leftCentered'
 
   setMap(map){
     this.sectionMap = map;
@@ -13,6 +14,14 @@ export default class GridColumnSections extends Component {
 
   setColumnsPerRow(perRow){
       this.columnsPerRow = perRow;
+  }
+
+  setClassName(className){
+    this.classNombre = className;
+  }
+
+  getClassName(){
+    return this.classNombre;
   }
 
   createColumns(){
@@ -38,7 +47,7 @@ export default class GridColumnSections extends Component {
     var rows = [];
 
     for (var i = 0; i < columns.length; i+=this.columnsPerRow){
-        console.log(counter);
+  
       rows[counter] = (
         
         <GridRow key={counter}>
@@ -53,7 +62,7 @@ export default class GridColumnSections extends Component {
  
     render() {
         return (
-          <div>
+          <div className={this.getClassName()}> 
            {this.createColumnRows()}
           </div>
         );
