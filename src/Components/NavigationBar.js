@@ -19,7 +19,8 @@ export default class NavigationBar extends Component {
     const { activeItem } = this.state;
     for (var i = 0; i < this.tabNames.length; i++){
       tabs[i] = (
-        <Menu.Item
+        <Menu.Item 
+              key = {this.tabNames[i]}
               as={NavLink} to={this.createLink(this.tabLinks[i])}
               name={this.tabNames[i]}
               active={activeItem === this.tabNames[i]}

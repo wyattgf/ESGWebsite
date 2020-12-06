@@ -13,7 +13,7 @@ export default class SideBarMenu extends Component {
 
    handleDefaultTab(){
     for (let key of this.tabMap.keys()){
-        this.setState({ activeItem: key, activeElement: this.tabMap.get(key) });
+        this.state = ({ activeItem: key, activeElement: this.tabMap.get(key) });
         break;
     } 
    }
@@ -38,6 +38,7 @@ export default class SideBarMenu extends Component {
     for (let key of this.tabMap.keys()){
         tabs[index] = (
             <Menu.Item
+              key = {key}
               name= {key}
               active={activeItem === key}
               onClick={ e => this.handleClick(key) }

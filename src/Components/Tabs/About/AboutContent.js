@@ -1,5 +1,5 @@
 import React, { Component }  from 'react';
-import {List, Table, Image, Segment} from "semantic-ui-react";
+import {List, Image, Segment, Grid, GridColumn, GridRow} from "semantic-ui-react";
 import ListPopup from './ListPopup';
 
 export default class AboutContent extends Component {
@@ -31,9 +31,9 @@ export default class AboutContent extends Component {
             </Segment>
             <Segment>
             <h1>Our Big Events</h1>
-            <Table>
-                <Table.Row>
-                    <Table.Cell>
+            <Grid>
+                <GridRow>
+                    <GridColumn width={4}>
                         <List bulleted>
                             <ListPopup info={this.eBallInfo} event={"E-Ball"} />
                             <ListPopup info={this.eSocialInfo} event = {"E-Social"}/>
@@ -43,15 +43,15 @@ export default class AboutContent extends Component {
                             <ListPopup info={this.pEdgeInfo} event={"P-Edge"}/>
                             <ListPopup info={this.eOktoberfestInfo} event={"E-Oktoberfest"}/>
                         </List>
-                    </Table.Cell>
-                    <Table.Cell>
+                    </GridColumn>
+                    <GridColumn width={6}>
                         <Image src={require(""+this.FOLDER_PATH+this.eSocialImage)}/>
-                    </Table.Cell>
-                    <Table.Cell>
+                    </GridColumn>
+                    <GridColumn width={6}>
                         <Image src ={require(""+this.FOLDER_PATH+this.eSocialImage2)}/>
-                    </Table.Cell>
-                </Table.Row>
-            </Table>
+                    </GridColumn>
+                </GridRow>
+            </Grid>
             </Segment>
             <Segment>
             <h1>Other Initiatives</h1>
