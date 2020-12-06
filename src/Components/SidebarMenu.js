@@ -1,18 +1,22 @@
 import React, { Component } from 'react'
-import { Grid, Menu, Segment } from 'semantic-ui-react'
+import { Grid, Menu} from 'semantic-ui-react'
 
 
 export default class SideBarMenu extends Component {
     tabMap = new Map();
+    state = { activeItem: '', activeElement: <div></div>}
     
    setMap(map){
        this.tabMap = map;
+       this.handleDefaultTab();
    }
 
-    firstTab = this.tabMap.keys().next().value;
-    state = { activeItem: this.firstTab, activeElement: this.tabMap.get(this.firstTab) }
-
-  
+   handleDefaultTab(){
+    for (let key of this.tabMap.keys()){
+        this.state = { activeItem: key, activeElement: this.tabMap.get(key) };
+        break;
+    } 
+   }
 
   handleItemClick = ( name ) => this.setState({ activeItem: name })
 
@@ -57,9 +61,9 @@ export default class SideBarMenu extends Component {
         </Grid.Column>
 
         <Grid.Column stretched width={12}>
-          <Segment>
+          
           {this.state.activeElement}
-          </Segment>
+          
         </Grid.Column>
         
       </Grid>

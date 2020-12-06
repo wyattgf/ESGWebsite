@@ -1,78 +1,23 @@
 import React, { Component } from 'react'
-import { Grid, Menu, Segment } from 'semantic-ui-react'
+import {Segment } from 'semantic-ui-react'
 import ESocials from './ESocials'
 import EPicnics from './EPicnics'
 import ESocialSponsorship from './ESocialSponsorship'
 import EBall from './EBall'
+import SideBarMenu from '../../SidebarMenu'
 
-export default class Events extends Component {
-  state = { activeItem: 'E-Socials', activeElement:<ESocials/> }
+export default class Events extends SideBarMenu {
 
-  handleItemClick = ( name ) => this.setState({ activeItem: name })
+  tabMap = new Map([
+    ['E-Socials', <Segment><ESocials/></Segment>],
+    ['E-Social Sponsorship', <Segment><ESocialSponsorship/></Segment>],
+    ['E-Picnics', <Segment><EPicnics/></Segment>],
+    ['E-Ball', <Segment><EBall/></Segment>],
+])
 
-  handleClick = (name) => {
-      this.handleItemClick(name);
-      this.handleSideBarClick(name);
-  }
+constructor(){
+    super();
+    this.setMap(this.tabMap);
+}
   
-  handleSideBarClick(name){
-    switch(name) {
-        case "E-Socials":
-    this.setState({activeElement: <ESocials/>});
-          break;
-        case "E-Social Sponsorship":
-    this.setState({activeElement:<ESocialSponsorship/>});
-          break;
-        case "E-Picnics":
-    this.setState({activeElement:<EPicnics/>});
-        break;
-        case "E-Ball":
-    this.setState({activeElement:<EBall/>});
-        break;
-        default:
-    this.setState({activeElement:<ESocials/>});
-      }
-  }
-
-  render() {
-    const { activeItem } = this.state
-
-    return (
-      <div className='tabContent'>
-      <Grid>
-        <Grid.Column width={3}>
-        <Menu secondary fluid vertical >
-            <Menu.Item
-              name='E-Socials'
-              active={activeItem === 'E-Socials'}
-              onClick={ e => this.handleClick("E-Socials") }
-            />
-            <Menu.Item
-              name='E-Social Sponsorship'
-              active={activeItem === 'E-Social Sponsorship'}
-              onClick={ e => this.handleClick("E-Social Sponsorship") }
-            />
-            <Menu.Item
-              name='E-Picnics'
-              active={activeItem === 'E-Picnics'}
-              onClick={ e => this.handleClick("E-Picnics") }
-            />
-            <Menu.Item
-              name='E-Ball'
-              active={activeItem === 'E-Ball'}
-              onClick={ e => this.handleClick("E-Ball") }
-            />
-          </Menu>
-        </Grid.Column>
-
-        <Grid.Column stretched width={12}>
-          <Segment>
-          {this.state.activeElement}
-          </Segment>
-        </Grid.Column>
-        
-      </Grid>
-      </div>
-    )
-  }
 }
