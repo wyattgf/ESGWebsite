@@ -30,7 +30,7 @@ export default class ESocialSponsorship extends Article {
 
     QUESTIONS = new Map([
         ['What are E-Socials?', this.ESOCIALS_ARE],
-        ['What are the logistics', this.LOGISTICS],
+        ['What are the logistics?', this.LOGISTICS],
         ['What is the cost of hosting?', this.HOSTING_COST],
         ['How can you be involved?', this.INVOLVED],
         ['ESG looks forward to working with you!', []]
