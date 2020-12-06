@@ -7,7 +7,7 @@ import ContactContent from './ContactContent'
 export default class Contact extends SideBarMenu {
 
   tabMap = new Map([
-    ['Content', <Segment><ContactContent/></Segment>]
+    ['Contact', <Segment><ContactContent/></Segment>]
 ])
 
 constructor(){
