@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import {Segment } from 'semantic-ui-react'
 import ESocials from './ESocials'
 import EPicnics from './EPicnics'

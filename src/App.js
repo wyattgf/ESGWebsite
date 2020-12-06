@@ -1,6 +1,5 @@
 import React from 'react';
 import './App.css';
-import Header from './Components/Header.js';
 import Footer from './Components/Footer.js'
 import StudentResources from './Components/Tabs/Student Resources/StudentResources.js'
 import Home from './Components/Tabs/Home/Home.js'

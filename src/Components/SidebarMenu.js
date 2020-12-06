@@ -13,7 +13,7 @@ export default class SideBarMenu extends Component {
 
    handleDefaultTab(){
     for (let key of this.tabMap.keys()){
-        this.state = { activeItem: key, activeElement: this.tabMap.get(key) };
+        this.setState({ activeItem: key, activeElement: this.tabMap.get(key) });
         break;
     } 
    }

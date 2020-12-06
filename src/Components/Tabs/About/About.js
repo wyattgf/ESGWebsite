@@ -1,5 +1,4 @@
-import React, { Component } from 'react'
-import { Grid, Menu } from 'semantic-ui-react'
+import React from 'react'
 import AboutContent from './AboutContent'
 import ExecutiveBoard from './ExecutiveBoard'
 import Constitution from './Constitution'
