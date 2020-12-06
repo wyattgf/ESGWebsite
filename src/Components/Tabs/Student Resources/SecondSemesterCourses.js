@@ -13,7 +13,7 @@ export default class SecondSemesterCourses extends GridColumnSections {
         'course for students who have AP credit for mechanics, and the course is required for BME, CE, and ME majors.'
     ]
     .join(' ')],
-    [' have AP credit for Physics 151, but not Physics 152. What course should I take?',[
+    ['I have AP credit for Physics 151, but not Physics 152. What course should I take?',[
         'You should take physics 152 in the fall of your sophomore year.'
     ].join(' ')],
     ['I have AP credit for both Physics 151 and 152, but I’m not sure if I want to take 153. Do I have any other options?','Your options to fulfill your Physics requirement with the appropriate AP credit are PHYSICS 152L, 153L, 246L, 361, or 362.  Note that most of these courses are only offered in the fall, or only offered in the spring.'],

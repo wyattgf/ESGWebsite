@@ -1,10 +1,12 @@
 import React from 'react'
 import GridColumnSections from '../../GridColumnSections';
-import {Grid, GridColumn, GridRow} from 'semantic-ui-react';
+import {Grid, GridColumn, GridRow, Image, Segment} from 'semantic-ui-react';
 
 
 
 export default class FirstSemesterCourses extends GridColumnSections {
+  IMAGES_PATH = './images/';
+
   profSocietyChaptersMap = new Map([
       ['American Institute of Aeronautics and Astronautics (AIAA)','https://sites.duke.edu/aero/'],
       ['American Society of Civil Engineers (ASCE)','https://dukeasce.wordpress.com/'],
@@ -17,18 +19,23 @@ export default class FirstSemesterCourses extends GridColumnSections {
   ])
 
   studentOrgsMap = new Map([
-    ['Design for America (DFA)',''],
-    ['Duke Electric Vehicles',''],
-    ['DUKENGINEER Magazine',''],
-    ['Duke Engineers for International Development (DEID)',''],
-    ['Duke Makers',''],
-    ['Duke Motorsports',''],
-    ['Duke Robotics',''],
-    ['Duke Smarthome',''],
-    ['E-Team (Peer Pratt Advising Team)',''],
-    ['Engineering World Health',''],
-    ['HackDuke',''],
-    ['InnoWorks','']
+    ['Duke Electric Vehicles','http://www.duke-ev.org/'],
+    ['DUKENGINEER Magazine','https://pratt.duke.edu/about/news/dukengineer'],
+    ['Duke Engineers for International Development (DEID)','https://sites.duke.edu/deid/'],
+    ['Duke Motorsports','http://dukemotorsports.blogspot.com/'],
+    ['Duke Robotics','http://robotics.pratt.duke.edu/'],
+    ['Duke Smarthome','http://smarthome.duke.edu/'],
+    ['E-Team (Peer Pratt Advising Team)','https://pratt.duke.edu/undergrad/students/advising/e-team'],
+    ['Engineering World Health','https://globalhealth.duke.edu/projects/duke-engineering-world-health'],
+    ['HackDuke','https://hackduke.org/'],
+  ])
+
+  honorSocietiesMap = new Map([
+    ['Tau Beta Pi (All majors)','https://web.duke.edu/TBPi/'],
+    ['Pi Tau Sigma (ME)','https://pitausigma.org/chapters/Duke%20Pi%20Iota'],
+    ['Chi Epsilon (CEE)','https://cee.duke.edu/about/awards-honors/chi-epsilon-honor-society'],
+    ['Eta Kappa Nu (ECE)','https://hkn.ieee.org/hkn-chapters/all-chapters/delta-lambda-chapter/'],
+    
   ])
 
   createLinks(map){
@@ -36,7 +43,7 @@ export default class FirstSemesterCourses extends GridColumnSections {
       var index = [];
       for (let key of map.keys()){
         links[index] = (
-            <div><a className = 'externalLink' target="_blank" rel="noopener noreferrer" href={map.get(key)}>{key}</a></div>
+           <div><a className = 'externalLink' target="_blank" rel="noopener noreferrer" href={map.get(key)}>{key}</a><br/></div>
         )
         index+=1;
       }
@@ -45,15 +52,15 @@ export default class FirstSemesterCourses extends GridColumnSections {
   sectionMap = new Map([
       ['Professional Society Chapters',this.createLinks(this.profSocietyChaptersMap)],
       ['Student Organizations',this.createLinks(this.studentOrgsMap)],
-      ['Honor Societies','']
+      ['Honor Societies',this.createLinks(this.honorSocietiesMap)]
 
     ])
 
     constructor(){
       super()
       this.setMap(this.sectionMap);
-      this.setColumnsPerRow(2);
-      this.setClassName('centerCentered');
+      this.setColumnsPerRow(1);
+      this.setClassName('leftCentered');
     }
   
     render() {
@@ -62,11 +69,18 @@ export default class FirstSemesterCourses extends GridColumnSections {
             <Grid>
                 <GridRow>
                     <GridColumn width={8}>
-                    {this.createColumnRows()}
+                    <Segment>{this.createColumnRows()}</Segment>
                     </GridColumn>
-                    <GridColumn width={6}>
-                        
+                      
+                    <GridColumn width={7}>
+                        <GridRow>
+                        <Segment><Image alt='Duke Motorsports' size ='huge' centered src={require("" + this.IMAGES_PATH + 'motorsports.jpg')}/></Segment>
+                        </GridRow>
+                        <GridRow>
+                        <Segment><Image alt='Duke Robotics' size ='big' centered src={require("" + this.IMAGES_PATH + 'robotics.jpg')}/></Segment>
+                        </GridRow>
                     </GridColumn>
+                    
                 </GridRow>
             </Grid>
           </div>
