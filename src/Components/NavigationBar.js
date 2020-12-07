@@ -7,10 +7,10 @@ import { NavLink } from 'react-router-dom'
 export default class NavigationBar extends Component {
   state = { activeItem: 'Nada' };
 
-   tabColors = ['red', 'orange', 'yellow', 'green', 'blue', 'purple']
-   tabIcons = ['info','birthday cake','phone', 'home', 'folder open', 'handshake']
-   tabNames = ['About','Events','Contact','Home', 'Student Resources', 'Partner With Pratt']
-   tabLinks = ['about','events','contact','home','studentResources','partnerWithPratt']
+   tabColors = ['red', 'orange', 'green', 'blue','purple']
+   tabIcons = ['info','birthday cake','home','phone',  'folder open']
+   tabNames = ['About','Events','Home','Contact', 'Student Resources']
+   tabLinks = ['about','events','home','contact','studentResources']
 
   handleItemClick = (e, { name }) => this.setState({ activeItem: name });
 
