@@ -5,6 +5,7 @@ import FirstSemesterCourses from './FirstSemesterCourses'
 import PrattRequirements from './PrattRequirements.js'
 import SecondSemesterCourses from './SecondSemesterCourses'
 import Clubs from './Clubs'
+import HelpfulLinks from './HelpfulLinks'
 
 
 export default class StudentResources extends SideBarMenu {
@@ -13,7 +14,7 @@ export default class StudentResources extends SideBarMenu {
         ['First Semester Courses', <Segment><FirstSemesterCourses/></Segment>],
         ['Second Semester Courses', <Segment><SecondSemesterCourses/></Segment>],
         ['Clubs', <Clubs/>],
-        ['Helpful Links', <div></div>]
+        ['Helpful Links', <Segment><HelpfulLinks/></Segment>]
   
     ])
   

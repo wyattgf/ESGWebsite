@@ -22,7 +22,7 @@ export default class AboutContent extends Component {
         return(
            <div>
                <Segment>
-             <h1>ESG's Mission</h1>
+             <h2>ESG's Mission</h2>
             <p style={{fontSize:"18px"}}>
             The mission of Engineering Student Government (ESG) is to represent the engineering student body in all 
             matters related to the Pratt School of Engineering. We act as a conduit between the administration and students, provide support to engineering clubs and societies, and work to create a social outlet for engineers throughout the academic year.
@@ -30,7 +30,7 @@ export default class AboutContent extends Component {
             <Image className='groupPic' src ={require(""+this.FOLDER_PATH+this.eOktoberfestGroupPic)}/>
             </Segment>
             <Segment>
-            <h1>Our Big Events</h1>
+            <h2>Our Big Events</h2>
             <Grid>
                 <GridRow>
                     <GridColumn width={4}>
@@ -54,7 +54,7 @@ export default class AboutContent extends Component {
             </Grid>
             </Segment>
             <Segment>
-            <h1>Other Initiatives</h1>
+            <h2>Other Initiatives</h2>
             <List bulleted>
                 <List.Item>Backend Communication with Deans to Improve Academic Experience</List.Item>
                 <List.Item>Substantial Funding for Engineering-Focued Clubs/Organizations</List.Item>

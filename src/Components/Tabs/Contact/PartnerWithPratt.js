@@ -49,8 +49,8 @@ export default class PartnerWithPratt extends Component {
     
     render(){
         return(
-            <Segment>
-            <div className='center'>
+            <Segment className='center'>
+            <div>
                     <h3>Contact</h3>
                     <div >{this.CONTENT[0]}</div> <br/>
                     <div >{this.CONTENT[1]}</div> <br/>

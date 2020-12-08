@@ -1,7 +1,5 @@
 import React from 'react'
-import { Segment} from 'semantic-ui-react'
 import SideBarMenu from '../../SidebarMenu'
-import ContactContent from './ContactContent'
 import PartnerWithPratt from './PartnerWithPratt'
 
 

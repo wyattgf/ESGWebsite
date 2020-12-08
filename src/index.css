@@ -27,6 +27,7 @@ code {
 }
 
 .execCard {
+  
   width: 100px;
   height: 570px;
 }
@@ -63,7 +64,7 @@ List.Item {
 .footer {
   padding-top: 3%;
   background-color:  rgb(245,245,245);
-  height: 100px;
+  height: 170px;
   text-align: center;
  
 }
@@ -120,7 +121,13 @@ List.Item {
 }
 
 .externalLink{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   color: #1e2c3a;
+}
+
+.externalLink:hover{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: purple;
 }
 
 .leftCentered {
@@ -129,6 +136,10 @@ List.Item {
 
 .centerCentered {
   text-align: center;
+}
+
+.headerThree {
+  font-size: 22px;
 }
 
 
