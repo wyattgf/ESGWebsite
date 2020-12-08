@@ -10,16 +10,29 @@ import Event from './Components/Tabs/Events/Events.js'
 import Animation from './Components/Animation.js'
 import {Route } from 'react-router-dom';
 import {BrowserRouter as Router} from 'react-router-dom';
-import {Container} from 'semantic-ui-react';
+import {Container, Grid, GridRow, GridColumn} from 'semantic-ui-react';
 
 function App() {
   return (
-    <div >
+    <Grid  stackable divided className='overallGrid'>
       <Router>
-        <NavigationBar/>
-        <Container fluid style={{ padding: 0 }}><Animation>WYATT</Animation></Container>
-      
+
+        <GridRow>
+        <GridColumn className='row'>
+          <NavigationBar/>
+        </GridColumn>
+        </GridRow>
+
+
+        <GridRow className = 'row'>
+          <GridColumn >
+          <Container fluid style={{ padding: 0 }}><Animation>WYATT</Animation></Container>
+          </GridColumn>
+        </GridRow>
     
+    
+        <GridRow>
+          <GridColumn>
         <Route
           path="/home"
           exact
@@ -48,8 +61,6 @@ function App() {
           <Contact/>}
         />
 
-      
-
           <Route
           path="/studentResources"
           exact
@@ -63,11 +74,19 @@ function App() {
           render={() => 
           <div>partner</div>}
         />
-
+        </GridColumn>
+      </GridRow>
         
       </Router>
-      <Footer/>
-    </div>
+      
+      <GridRow>
+            <GridColumn >
+                <Footer/>
+            </GridColumn>
+      
+      </GridRow>
+     
+    </Grid>
   );
 }
 

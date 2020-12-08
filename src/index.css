@@ -45,7 +45,7 @@ List.Item {
 .constPopup {
   width: 1000px;
   height: 300px;
-  overflow: scroll;
+  overflow: auto;
 }
 
 .home {
@@ -64,7 +64,7 @@ List.Item {
 .footer {
   padding-top: 3%;
   background-color:  rgb(245,245,245);
-  height: 170px;
+  height: 150px;
   text-align: center;
  
 }
@@ -86,7 +86,7 @@ List.Item {
 }
 
 .tabContent{
-  padding-top: 12%;
+  padding-top: 1%;
   padding-left: 1%;
   padding-right: 0%;
   height: 100%;
@@ -97,8 +97,10 @@ List.Item {
 
 .navBar {
   padding-top: 1%;
-  padding-bottom: 1%;
+  padding-bottom: 0%;
   background-color: 	rgb(245,245,245);
+  width: 100%;
+  height: 5%;
 }
 
 .center {
@@ -116,8 +118,18 @@ List.Item {
   text-align: left;
   color: 	rgb(245,245,245);
   padding-top: 5%;
-  padding-left: 1%;
+  padding-left: 3%;
+  
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.vantaAnimation {
+  padding-bottom: 7%;
+}
+.row {
+  width: 100%;
+  height: 100%;
+  
 }
 
 .externalLink{
@@ -141,5 +153,10 @@ List.Item {
 .headerThree {
   font-size: 22px;
 }
+
+.overallGrid {
+  background-color: rgb(245,245,245);
+}
+
 
 

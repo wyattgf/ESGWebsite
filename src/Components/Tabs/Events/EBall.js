@@ -8,11 +8,16 @@ export default class EBall extends Component {
     CONTENT2 = [
         "More information will be provided as the situation develops.  We appreciate your understanding in this difficult time."
     ]
+
+    CONTENT3 = [
+        'ESG wishes you and your loved ones the best of health.'
+    ]
     render(){
         return(
-            <div>
+            <div className='centerCentered'>
                 <h2>{this.CONTENT}</h2>
                 <h3>{this.CONTENT2}</h3>
+                <h3>{this.CONTENT3}</h3>
             </div>
         )
     }

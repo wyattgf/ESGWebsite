@@ -11,6 +11,7 @@ export default class Animation extends React.Component {
     this.vantaRef = React.createRef()
   }
   componentDidMount() {
+    //whiteish: 'rgb(245,245,245)', blueish: 'rgb(30, 44, 58)'
     this.vantaEffect = GLOBE({
       el: this.vantaRef.current,
       mouseControls: false,
@@ -31,7 +32,7 @@ export default class Animation extends React.Component {
     if (this.vantaEffect) this.vantaEffect.destroy()
   }
   render() {
-    return <div ref={this.vantaRef}>
+    return <div className = 'vantaAnimation' ref={this.vantaRef}>
       <h1 className='animationText'>Engineering Student Government <br/> @ Duke University</h1>
     </div>
   }

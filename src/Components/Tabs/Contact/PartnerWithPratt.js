@@ -49,17 +49,20 @@ export default class PartnerWithPratt extends Component {
     
     render(){
         return(
-            <Segment className='center'>
-            <div>
+            <div className='center'>
+            <Segment>
                     <h3>Contact</h3>
                     <div >{this.CONTENT[0]}</div> <br/>
                     <div >{this.CONTENT[1]}</div> <br/>
                     <div >{this.CONTENT[2]}</div> <br/>
-            </div>
-            <div>
-            <p >
+            </Segment>
+
+            <Segment>
+                
+            <p>
                 {this.SUMMARY} 
             </p>
+
             <Grid>
                 <GridRow >
                 {this.createEmail(this.emailMap.get('E-Social'))}
@@ -67,8 +70,9 @@ export default class PartnerWithPratt extends Component {
                 {this.createEmail(this.emailMap.get('President'))}
                 </GridRow>
             </Grid>
-            </div>
+
             </Segment>
+            </div>
         )
     }
 
