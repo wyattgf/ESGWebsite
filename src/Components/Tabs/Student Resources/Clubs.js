@@ -1,6 +1,6 @@
 import React from 'react'
 import GridColumnSections from '../../GridColumnSections';
-import {Grid, GridColumn, GridRow, Image, Segment} from 'semantic-ui-react';
+import {Grid, GridColumn, GridRow, Image, Segment, SegmentGroup} from 'semantic-ui-react';
 
 
 
@@ -69,7 +69,7 @@ export default class FirstSemesterCourses extends GridColumnSections {
             <Grid>
                 <GridRow>
 
-
+                
                     <GridColumn width={8}>
                     <Segment>
                       <h2 className='centerCentered'>Links</h2>
@@ -84,9 +84,9 @@ export default class FirstSemesterCourses extends GridColumnSections {
                           <Segment><Image alt='Duke Motorsports' size ='huge' centered src={require("" + this.IMAGES_PATH + 'motorsports.jpg')}/></Segment>
                         
                           <Segment><Image alt='Duke Robotics' size ='big' centered src={require("" + this.IMAGES_PATH + 'robotics.jpg')}/></Segment>
-                        
+                          
                     </GridColumn>
-                    
+                   
                 </GridRow>
                
             </Grid>

@@ -21,15 +21,19 @@ code {
 }
 
 .headshot {
-  width: 250px;
-  height: 250px;
+  max-width: 250px;
+  max-height: 250px;
 
 }
 
 .execCard {
-  
-  width: 100px;
-  height: 570px;
+  height: 560px;
+  padding: 1rem;
+}
+
+.dynamicExecRow {
+  display: flex;
+  justify-content: center;
 }
 
 .groupPic {

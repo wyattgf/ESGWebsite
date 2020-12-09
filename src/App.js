@@ -14,7 +14,7 @@ import {Container, Grid, GridRow, GridColumn} from 'semantic-ui-react';
 
 function App() {
   return (
-    <Grid  stackable divided className='overallGrid'>
+    <Grid  stackable className='overallGrid'>
       <Router>
 
         <GridRow>

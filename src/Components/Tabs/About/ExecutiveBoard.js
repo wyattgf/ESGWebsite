@@ -1,4 +1,4 @@
-import { Card,Image ,Table} from 'semantic-ui-react';
+import { Card,Image ,Grid, GridColumn, GridRow, Segment} from 'semantic-ui-react';
 import React, { Component }  from 'react';
 import "../../../index.css";
 //import  "../../../data/images";
@@ -36,68 +36,49 @@ constructor(props){
 }
   individualCard(name,graduation,title,email,fact,image){
     return(
-    <Card className='execCard' key = {name}>
-        <Image alt = {name} src={require("" + image)} wrapped ui={false} />
-        <Card.Content>
-        <Card.Header>{name}</Card.Header>
-        <Card.Meta>
-            <span className='graduation'>Class of {graduation}</span>
-        </Card.Meta>
-        <Card.Description>
-            Position: {title} <br></br>
-            Email: <a rel="noopener noreferrer" href={this.createEmail(email)} target="_blank">{email}</a> <br></br>
-            Fun Fact: {fact}<br></br>
-        </Card.Description>
-        </Card.Content>
-    </Card>
+    <div className='execCard'>
+        <Card  key = {name}>
+            <Image alt = {name} src={require("" + image)} wrapped ui={false} />
+            <Card.Content>
+            <Card.Header >{name}</Card.Header>
+            <Card.Meta>
+        Class of {graduation}
+            </Card.Meta>
+            <Card.Description>
+        Position: {title} <br/>
+        Email: <a className = 'externalLink' rel="noopener noreferrer" href={this.createEmailLink(email)} target="_blank">{email}</a> <br></br>
+        Fun Fact: {fact}<br></br>
+            </Card.Description>
+            </Card.Content>
+        </Card>
+    </div>
     )
 }
 
-createEmail(email){
-    return ('mailto:' + email);
-}
+    createEmailLink(email){
+        return ('mailto:' + email);
+    }
 
     createCards(){
         for (var i = 0; i < this.execBoard.length; i++){
-            this.execBoardCards[i] = this.individualCard(this.execBoard[i][0],this.execBoard[i][1],this.execBoard[i][2],this.execBoard[i][3],this.execBoard[i][4],this.IMAGES_PATH+this.execBoard[i][5]);
+            this.execBoardCards[i] = this.individualCard(
+                this.execBoard[i][0], //name
+                this.execBoard[i][1], //grad year
+                this.execBoard[i][2], // position title
+                this.execBoard[i][3], // email
+                this.execBoard[i][4], // fun fact
+                this.IMAGES_PATH+this.execBoard[i][5] //image
+            );
         }  
  }
 
-    createTable(){
-        var rowIndex = 0;
-        var rows = [];
-        for (var i = 0; i <this.execBoardCards.length;i++){
-           rows[rowIndex] =(
-                <Table.Row>
-                    {this.createRowCell(i,this.execBoardCards.length)}
-                    {this.createRowCell(i+1,this.execBoardCards.length)}
-                    {this.createRowCell(i+2,this.execBoardCards.length)}
-                </Table.Row>
-           );
-           rowIndex+=1;
-           i+=2;
-        }
-
-        return(
-
-            <Table>
-               {rows}
-            </Table>
-
-        )
-    }
-
-    createRowCell(i, length){
-        if (i < length){
-            return (<Table.Cell >{this.execBoardCards[i]}</Table.Cell>)
-        }
-        return (<Table.Cell/>)
-    }
-
-
     render(){
         return(
-            this.createTable()
+            <Grid>
+                <GridRow className = 'dynamicExecRow'>
+                    {this.execBoardCards}
+                </GridRow>
+            </Grid>
         ) 
     }
 }
