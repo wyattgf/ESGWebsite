@@ -5,8 +5,8 @@ import ExecCard from './ExecCard';
 //import  "../../../data/images";
 
 export default class ExecutiveBoard extends Component {
-
 execBoardCards = [];
+
 
 //template {"name":"","graduation":-1,"title":"","email":"","fact":"","image":""},
     
@@ -21,9 +21,12 @@ execBoardCards = [];
     {"name":"Alexa Tannebaum","graduation":2021,"title":"Chief Marketing Officer","email":"alexa.tannebaum@duke.edu","fact":"Thinks she's famous from Three Peas in the Pod","image":"alexatannebaum.jpg"},
     {"name":"Claire Szuter","graduation":2022,"title":"E-Ball/E-Picnic Chair","email":"claire.szuter@duke.edu","fact":"Took her until freshman spring to join ESG","image":"claireszuter.png"},
     {"name":"Kunal Upadya","graduation":2021,"title":"Class of 2021 President","email":"kunal.upadya@duke.edu","fact":"Insists Gates House is the best dorm","image":"kunalupadya.png"},
-    {"name":"Bennett David","graduation":2022,"title":"Class of 2022 President","email":"bennett.david@duke.edu","fact":"Told the freshman that Trinity could votefor ESG","image":"bennettdavid.png"},
+    {"name":"Bennett David","graduation":2022,"title":"Class of 2022 President","email":"bennett.david@duke.edu","fact":"Told the freshman that Trinity could vote for ESG","image":"bennettdavid.png"},
     {"name":"Parker Vakili","graduation":2023,"title":"Class of 2023 President","email":"parker.vakili@duke.edu","fact":"EGR 101's #1 Fan","image":"parkervakili.png"},
-  ]
+    {"name":"Vivian Su","graduation":2024,"title":"Class of 2024 President","email":"vivian.su@duke.edu","fact":"I feel like I see her in this red jacket in a lot of her pictures","image":"viviansu.JPEG"},
+    {"name":"Ben Perry","graduation":2024,"title":"Freshman Representative","email":"benjamin.perry@duke.edu","fact":"Will consistently forget your new-member getting-to-know you coffee chat", "image":"default.png"},
+    {"name":"Jack Rhodes","graduation":2024,"title":"Freshman Representative","email":"jsr73@duke.edu","fact":"Was much taller in person than I expected","image":"jackrhodes.jpg"},
+]
 
 constructor(props){
     super();

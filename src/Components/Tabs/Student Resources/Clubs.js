@@ -1,6 +1,6 @@
 import React from 'react'
 import GridColumnSections from '../../GridColumnSections';
-import {Grid, GridColumn, GridRow, Image, Segment, SegmentGroup} from 'semantic-ui-react';
+import {Grid, GridRow, Image, Segment} from 'semantic-ui-react';
 
 
 

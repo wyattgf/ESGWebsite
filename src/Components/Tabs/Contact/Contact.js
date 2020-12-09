@@ -1,6 +1,5 @@
 import React from 'react'
 import SideBarMenu from '../../SidebarMenu'
-import ContactContent from './ContactContent';
 import PartnerWithPratt from './PartnerWithPratt'
 
 
