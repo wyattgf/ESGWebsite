@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {Grid, GridColumn, Image, Accordion} from 'semantic-ui-react'
+import {Grid, GridRow, Image, Accordion, Segment} from 'semantic-ui-react'
 
 export default class ESocial extends Component {
     IMAGE_PATH = './images/'
@@ -47,23 +47,33 @@ export default class ESocial extends Component {
 
     render(){
         return(
-            <div>
-                {this.DESCRIPTION}
-                <Accordion defaultActiveIndex={0} panels={this.infoPanels} />
+          <div className='centerCentered'>
+              <h2>E-Socials</h2>
                 <Grid>
-                    <Grid.Row>
-                        
-                    </Grid.Row>
-                    <Grid.Row height={10}>
-                        <GridColumn width={4}/>
-                        <GridColumn width={4}>
-                            <Image src={require(this.IMAGE_PATH+'e-social-twinnie.jpeg')}/>
-                        </GridColumn>
-                        <GridColumn width={4}>
-                            <Image src={require(this.IMAGE_PATH+'e-social-twinnie2.jpeg')}/>
-                        </GridColumn>
-                        <GridColumn width={4}/>
-                    </Grid.Row>
+                    <GridRow className='dynamicRow'>
+
+                      <div className = 'dynamicEl' style={{'width': '100%'}}>
+                        <Segment>
+                          <Accordion defaultActiveIndex={0} panels={this.infoPanels} />
+                        </Segment>
+                      </div>
+                      </GridRow>
+
+                    <GridRow >
+                      <div className = 'dynamicEl'>
+                        <Segment style={{maxWidth: "450px"}}>
+                        <Image size = 'big' src={require(this.IMAGE_PATH+'e-social-twinnie.jpeg')}/>
+                        </Segment>
+                      </div>
+                            
+                      <div className = 'dynamicEl'>
+                        <Segment style={{maxWidth: "450px"}}>
+                        <Image size = 'big' src={require(this.IMAGE_PATH+'e-social-twinnie2.jpeg')}/>
+                        </Segment>
+                      </div>
+
+
+                    </GridRow>
                 </Grid>
             </div>
         )
