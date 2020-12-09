@@ -31,9 +31,13 @@ code {
   padding: 1rem;
 }
 
-.dynamicExecRow {
+.dynamicRow {
   display: flex;
   justify-content: center;
+}
+
+.dynamicEl {
+  padding: 1rem;
 }
 
 .groupPic {

@@ -8,7 +8,8 @@ export default class ExecutiveBoard extends Component {
 
 execBoardCards = [];
 
-
+//template {"name":"","graduation":-1,"title":"","email":"","fact":"","image":""},
+    
  execBoard = [
     {"name":"Polin Liu","graduation":2021,"title":"Executive President","email":"polin.liu@duke.edu","fact":"Trilingual but not tri-fluent","image":"polinliu.png"},
     {"name":"Emma Steadman","graduation":2022,"title":"Executive Vice President","email":"emma.steadman@duke.edu","fact":"Grew up with Niagra Falls in her backyard","image":"emmasteadman.jpg"},
@@ -52,7 +53,7 @@ constructor(props){
 render(){
         return(
             <Grid>
-                <GridRow className = 'dynamicExecRow'>
+                <GridRow className = 'dynamicRow'>
                     {this.execBoardCards}
                 </GridRow>
             </Grid>

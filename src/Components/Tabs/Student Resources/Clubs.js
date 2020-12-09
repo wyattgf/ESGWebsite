@@ -67,25 +67,23 @@ export default class FirstSemesterCourses extends GridColumnSections {
         return (
           <div className={this.classNombre}> 
             <Grid>
-                <GridRow>
+                <GridRow className='dynamicRow'>
 
-                
-                    <GridColumn width={8}>
-                    <Segment>
-                      <h2 className='centerCentered'>Links</h2>
-                      {this.createColumnRows()}
+                   <div className = 'dynamicEl'>
+                    <Segment style={{maxWidth: "500px"}}>
+                          <h2 className='centerCentered'>Links</h2>
+                          {this.createColumnRows()}
                       </Segment>
-                    </GridColumn>
-                      
-
-
-                    <GridColumn width={7}>
-                        
-                          <Segment><Image alt='Duke Motorsports' size ='huge' centered src={require("" + this.IMAGES_PATH + 'motorsports.jpg')}/></Segment>
-                        
-                          <Segment><Image alt='Duke Robotics' size ='big' centered src={require("" + this.IMAGES_PATH + 'robotics.jpg')}/></Segment>
-                          
-                    </GridColumn>
+                   </div>
+                    
+                   
+                   <div className = 'dynamicEl'>
+                    <Segment style={{maxWidth: "500px"}}>
+                      <Image alt='Duke Motorsports' size ='big' centered src={require("" + this.IMAGES_PATH + 'motorsports.jpg')}/> 
+                      <Image alt='Duke Robotics' size ='big' centered src={require("" + this.IMAGES_PATH + 'robotics.jpg')}/>
+                    </Segment>
+                    </div>     
+                   
                    
                 </GridRow>
                

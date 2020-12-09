@@ -26,7 +26,7 @@ function App() {
 
         <GridRow className = 'row'>
           <GridColumn >
-          <Container fluid style={{ padding: 0 }}><Animation>WYATT</Animation></Container>
+          <Container fluid style={{ padding: 0 }}><Animation/></Container>
           </GridColumn>
         </GridRow>
     
