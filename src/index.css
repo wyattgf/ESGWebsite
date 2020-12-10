@@ -104,8 +104,8 @@ List.Item {
 
 .navBar {
   padding-top: 1rem;
-  padding-left: auto;
-  padding-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
   padding-bottom: 0rem;
   background-color: 	rgb(245,245,245);
   width: 100%;
