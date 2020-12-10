@@ -24,7 +24,7 @@ execBoardCards = [];
     {"name":"Bennett David","graduation":2022,"title":"Class of 2022 President","email":"bennett.david@duke.edu","fact":"Told the freshman that Trinity could vote for ESG","image":"bennettdavid.png"},
     {"name":"Parker Vakili","graduation":2023,"title":"Class of 2023 President","email":"parker.vakili@duke.edu","fact":"EGR 101's #1 Fan","image":"parkervakili.png"},
     {"name":"Vivian Su","graduation":2024,"title":"Class of 2024 President","email":"vivian.su@duke.edu","fact":"I feel like I see her in this red jacket in a lot of her pictures","image":"viviansu.JPEG"},
-    {"name":"Ben Perry","graduation":2024,"title":"Freshman Representative","email":"benjamin.perry@duke.edu","fact":"Will consistently forget your new-member getting-to-know you coffee chat", "image":""},
+    {"name":"Ben Perry","graduation":2024,"title":"Freshman Representative","email":"benjamin.perry@duke.edu","fact":"Will consistently forget your new-member getting-to-know-you coffee chat", "image":""},
     {"name":"Jack Rhodes","graduation":2024,"title":"Freshman Representative","email":"jsr73@duke.edu","fact":"Was much taller in person than I expected","image":"jackrhodes.jpg"},
 ]
 

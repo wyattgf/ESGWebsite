@@ -59,19 +59,15 @@ export default class ESocial extends Component {
                       </div>
                       </GridRow>
 
-                    <GridRow >
-                      <div className = 'dynamicEl'>
-                        <Segment style={{maxWidth: "450px"}}>
-                        <Image size = 'big' src={require(this.IMAGE_PATH+'e-social-twinnie.jpeg')}/>
-                        </Segment>
-                      </div>
-                            
-                      <div className = 'dynamicEl'>
-                        <Segment style={{maxWidth: "450px"}}>
-                        <Image size = 'big' src={require(this.IMAGE_PATH+'e-social-twinnie2.jpeg')}/>
+                    <GridRow className='dynamicRow'>
+                      <div className = 'dynamicEl centerCentered'>
+                        <Segment>
+                        <Image size = 'large' src={require(this.IMAGE_PATH+'e-social-twinnie2.jpeg')}/>
                         </Segment>
                       </div>
 
+
+                      
 
                     </GridRow>
                 </Grid>

@@ -3,14 +3,14 @@ import {Card, Image} from 'semantic-ui-react'
 
 export default class ExecCard extends Component {
     IMAGE_PATH = './images/';
-    DEFAULT_IMAGE = this.IMAGE_PATH+ 'default.png';
+    DEFAULT_IMAGE ='default.png';
 
     createEmailLink(email){
         return ('mailto:' + email);
     }
 
     validateImage(image){
-        return (image && image != '') ? (this.IMAGE_PATH+image) : this.DEFAULT_IMAGE;
+        return this.IMAGE_PATH+((image && image !== '') ? image : this.DEFAULT_IMAGE);
     }
 
     render(){

@@ -18,24 +18,24 @@ function App() {
       <Router>
 
         <GridRow>
-        <GridColumn className='row'>
+        <div className='row'>
           <NavigationBar/>
-        </GridColumn>
+        </div>
         </GridRow>
 
 
-        <GridRow className = 'row'>
-          <GridColumn >
-          <Container fluid style={{ padding: 0 }}><Animation/></Container>
-          </GridColumn>
+        <GridRow>
+          <div className = 'row'>
+          <Animation/>
+          </div>
         </GridRow>
     
     
         <GridRow>
-          <GridColumn>
+          <div className='row'>
         <Route
-          path="/home"
           exact
+          path="/"
           render={() => 
           <Home/>}
         />
@@ -74,7 +74,7 @@ function App() {
           render={() => 
           <div>partner</div>}
         />
-        </GridColumn>
+        </div>
       </GridRow>
         
       </Router>

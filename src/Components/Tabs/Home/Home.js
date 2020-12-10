@@ -18,6 +18,11 @@ export default class Home extends Component {
     }  
 
     render(){
+        const verticalAlign = {
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          };
         return(
             <div className = 'tabContent' >
                 
@@ -28,8 +33,8 @@ export default class Home extends Component {
                                 {this.createColumnConent('Who we ARE',this.ARE)}
                                 {this.createColumnConent('Get INVOLVED',this.INVOLVED)}
                             </GridColumn>
-                            <GridColumn width={8}>
-                                 <Segment>
+                            <GridColumn style={verticalAlign} width={8}>
+                                 <Segment >
                                     <Image alt='E-Quad' size ='big' centered src={require("" + this.IMAGES_PATH + 'pratt-pretty.jpeg')}/>
                                  </Segment>
                             </GridColumn>

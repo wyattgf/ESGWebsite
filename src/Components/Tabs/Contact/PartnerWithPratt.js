@@ -34,7 +34,7 @@ export default class PartnerWithPratt extends Component {
 
     createEmail(info){
         return (
-            <a className = 'center' rel="noopener noreferrer" href={this.createLink(info)} target="_blank"  ><Button size='massive'>{info[4]}</Button></a>
+            <a className = 'center dynamicEl' rel="noopener noreferrer" href={this.createLink(info)} target="_blank"  ><Button size='massive'>{info[4]}</Button></a>
         )
     }
 
@@ -64,7 +64,7 @@ export default class PartnerWithPratt extends Component {
             </p>
 
             <Grid>
-                <GridRow >
+                <GridRow className='dynamicRow'>
                 {this.createEmail(this.emailMap.get('E-Social'))}
                 {this.createEmail(this.emailMap.get('Club Sponsor'))}
                 {this.createEmail(this.emailMap.get('President'))}

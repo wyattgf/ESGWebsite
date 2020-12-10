@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import {Grid, GridColumn, GridRow, Image, Segment, Accordion } from 'semantic-ui-react'
-import GridColumnSections from '../../GridColumnSections';
+import {Grid, GridRow, Image, Segment, Accordion } from 'semantic-ui-react'
+
 
 export default class EPicnics extends Component {
     IMAGE_PATH = './images/';
@@ -68,9 +68,9 @@ export default class EPicnics extends Component {
                       </GridRow>
 
                     <GridRow>
-                      <div className = 'dynamicEl'>
+                      <div className = 'dynamicEl centerCentered'>
                         <Segment>
-                        <Image size = 'massive' src={require(this.IMAGE_PATH+'line-for-food.jpeg')}/>
+                        <Image className ='centerCentered' size = 'massive' src={require(this.IMAGE_PATH+'line-for-food.jpeg')}/>
                         </Segment>
                       </div>
              
