@@ -11,83 +11,105 @@ import Animation from './Components/Animation.js'
 import {Route } from 'react-router-dom';
 import {BrowserRouter as Router} from 'react-router-dom';
 import {Container, Grid, GridRow, GridColumn} from 'semantic-ui-react';
+import { WindowContext } from './Components/WindowContext';
 
-function App() {
-  return (
-    <Grid  stackable className='overallGrid'>
-      <Router>
+class App extends React.Component {
 
-        <GridRow>
-        <div className='row'>
-          <NavigationBar/>
-        </div>
-        </GridRow>
+state = { width: 0, height: 0 };
 
+ componentDidMount() {
+      this.updateWindowDimensions();
+      window.addEventListener("resize", this.updateWindowDimensions);
+    }
 
-        <GridRow>
-          <div className = 'row'>
-          <Animation/>
+ componentWillUnmount() {
+      window.removeEventListener("resize", this.updateWindowDimensions);
+    }
+
+  updateWindowDimensions = () => {
+      this.setState({ width: window.innerWidth, height: window.innerHeight });
+    };
+
+  
+  render(){
+    return (
+      <Grid  stackable className='overallGrid'>
+        <WindowContext.Provider value={this.state}>
+        <Router>
+  
+          <GridRow>
+          <div className='row'>
+            <NavigationBar/>
+          </div>
+          </GridRow>
+  
+  
+          <GridRow>
+            <div className = 'row'>
+            <Animation/>
+            </div>
+          </GridRow>
+      
+      
+          <GridRow>
+            <div className='row'>
+          <Route
+            exact
+            path="/"
+            render={() => 
+            <Home/>}
+          />
+  
+          <Route
+            path="/about"
+            exact
+            render={() => 
+            <About className='tab'/>}
+          />
+  
+          <Route
+            path="/events"
+            exact
+            render={() => 
+            <Event/>}
+          />
+  
+            <Route
+            path="/contact"
+            exact
+            render={() => 
+            <Contact/>}
+          />
+  
+            <Route
+            path="/studentResources"
+            exact
+            render={() => 
+            <StudentResources/>}
+          />
+  
+            <Route
+            path="/partnerWithPratt"
+            exact
+            render={() => 
+            <div>partner</div>}
+          />
           </div>
         </GridRow>
-    
-    
-        <GridRow>
-          <div className='row'>
-        <Route
-          exact
-          path="/"
-          render={() => 
-          <Home/>}
-        />
-
-        <Route
-          path="/about"
-          exact
-          render={() => 
-          <About className='tab'/>}
-        />
-
-        <Route
-          path="/events"
-          exact
-          render={() => 
-          <Event/>}
-        />
-
-          <Route
-          path="/contact"
-          exact
-          render={() => 
-          <Contact/>}
-        />
-
-          <Route
-          path="/studentResources"
-          exact
-          render={() => 
-          <StudentResources/>}
-        />
-
-          <Route
-          path="/partnerWithPratt"
-          exact
-          render={() => 
-          <div>partner</div>}
-        />
-        </div>
-      </GridRow>
+          
+        </Router>
         
-      </Router>
-      
-      <GridRow>
-            <GridColumn >
-                <Footer/>
-            </GridColumn>
-      
-      </GridRow>
-     
-    </Grid>
-  );
+        <GridRow>
+              <GridColumn >
+                  <Footer/>
+              </GridColumn>
+        
+        </GridRow>
+        </WindowContext.Provider>
+      </Grid>
+    );
+  }
+    
 }
 
 export default App;
