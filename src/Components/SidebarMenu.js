@@ -61,7 +61,7 @@ export default class SideBarMenu extends Component {
             {this.createMenu()}
         </Grid.Column>
 
-        <Grid.Column stretched width={12}>
+        <Grid.Column  width={12}>
           
           {this.state.activeElement}
           
