@@ -41,7 +41,6 @@ export default class SideBarMenu extends Component {
     for (let key of this.tabMap.keys()){
         tabs[index] = (
             <Menu.Item
-            className='centerCentered'
               key = {key}
               name= {key}
               active={activeItem === key}
