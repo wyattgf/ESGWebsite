@@ -26,7 +26,7 @@ export default class Constitution extends Component {
                 content={this.ARTICLES.get(key)}
                 on='click'
                 pinned
-                trigger={<Card className='article' style={{width:"500px"}}><Card.Header>{key}</Card.Header></Card>}
+                trigger={<Card className='article' style={{width: '100%'}}><Card.Header>{key}</Card.Header></Card>}
             />
             index+=1;
        }

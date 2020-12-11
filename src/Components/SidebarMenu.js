@@ -42,10 +42,13 @@ export default class SideBarMenu extends Component {
         tabs[index] = (
             <Menu.Item
               key = {key}
-              name= {key}
               active={activeItem === key}
               onClick={ e => this.handleClick(key) }
-            />
+            >
+                <div className={this.menuItemStyle(width)}>
+                  {key}
+                </div>
+            </Menu.Item>
         )
         index+=1;
     }
@@ -61,6 +64,10 @@ export default class SideBarMenu extends Component {
             {tabs}
         </Menu>
     )
+  }
+
+  menuItemStyle(width){
+    return (width < this.SHRUNK_WINDOW_WIDTH) ? 'centerCentered' : ''
   }
 
   sideBarClass(width){
