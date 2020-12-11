@@ -1,10 +1,18 @@
 import React, { Component } from 'react'
-import { Grid, Menu} from 'semantic-ui-react'
+import { Grid, GridRow, Menu} from 'semantic-ui-react'
+import {WindowContext} from './WindowContext';
+
 
 
 export default class SideBarMenu extends Component {
-    tabMap = new Map();
-    state = { activeItem: '', activeElement: <div></div>}
+  static contextType = WindowContext
+  wind = {}
+  componentDidMount(){
+    this.wind = this.context
+  }
+
+  tabMap = new Map();
+  state = { activeItem: '', activeElement: <div></div>}
     
    setMap(map){
        this.tabMap = map;
@@ -56,18 +64,26 @@ export default class SideBarMenu extends Component {
   render() {
     return (
       <div className='tabContent'>
-      <Grid>
-        <Grid.Column width={3}>
-            {this.createMenu()}
-        </Grid.Column>
+        <WindowContext.Consumer>
+        {(props) => {
+            return(
+              <Grid>
+                <GridRow className='dynamicRow'>
+                  
+                <div className='sideBar'>
+                    {this.createMenu()}
+                </div>
 
-        <Grid.Column  width={12}>
-          
-          {this.state.activeElement}
-          
-        </Grid.Column>
-        
-      </Grid>
+                <div className='sideBarContent'>
+                  {this.state.activeElement}
+                </div>
+
+
+                </GridRow>
+              </Grid>
+            )
+        }}
+      </WindowContext.Consumer>
       </div>
     )
   }

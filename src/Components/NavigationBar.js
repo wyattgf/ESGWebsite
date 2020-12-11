@@ -1,13 +1,13 @@
 import React, {useState, useContext} from 'react'
 import { Menu, Icon, Grid } from 'semantic-ui-react'
 import { NavLink } from 'react-router-dom'
-import { WindowContext } from './WindowContext';
+//import WindowContext  from './WindowContext';
 
 
 
 export default function NavigationBar(){
   const [activeItem, setActiveItem] = useState('Nada');
-  var window = useContext(WindowContext);
+  //var window = useContext(WindowContext);
 
   const  tabColors = ['red', 'orange', 'green', 'blue','purple']
   const  tabIcons = ['info','birthday cake','home','phone',  'folder open']

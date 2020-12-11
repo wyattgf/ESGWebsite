@@ -170,5 +170,23 @@ List.Item {
   background-color: rgb(245,245,245);
 }
 
+.sideBar {
+  width: 20%;
+  padding-left: 2rem;
+}
+
+.sideBarShrunk {
+  width: 100%;
+}
+
+.sideBarContent{
+  width: 80%;
+  padding-right: 4rem;
+}
+
+.sideBarContentShrunk{
+  width: 100;
+}
+
 
 
