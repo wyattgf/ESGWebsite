@@ -29,6 +29,7 @@ export default function AppRoutes() {
   function createIndividualRoute(route){
     return (
       <Route
+      key={route.path}
       path={route.path}
       exact
       render={() => 

@@ -5,7 +5,10 @@ import "../../../index.css"
 class ListPopup extends Component {
   
   render(){
-    return <Popup content={this.props.info} trigger={<List.Item>{this.props.event}</List.Item>} />
+    return <Popup content={this.props.info} trigger={
+    <List.Item>
+      {this.props.event}
+      </List.Item>} />
   }
 }
 
