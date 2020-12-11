@@ -17,11 +17,7 @@ export default function Home () {
         )
     }  
 
-    const verticalAlign = {
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-      };
+    
 
         
         return(
@@ -33,7 +29,7 @@ export default function Home () {
                                 {createColumnConent('Who we ARE',ARE)}
                                 {createColumnConent('Get INVOLVED',INVOLVED)}
                             </div>
-                            <div className = 'dynamicEl' style={verticalAlign} >
+                            <div className = 'dynamicEl verticalAlign'  >
                                  <Segment >
                                     <Image alt='E-Quad' size ='big' centered src={require("" + IMAGES_PATH + 'pratt-pretty.jpeg')}/>
                                  </Segment>

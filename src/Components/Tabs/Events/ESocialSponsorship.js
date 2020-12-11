@@ -1,6 +1,7 @@
 import React from 'react'
-import { GridColumn, GridRow, Grid, Image } from 'semantic-ui-react'
+import { Segment, GridRow, Grid, Image } from 'semantic-ui-react'
 import Article from '../About/ConstitutionArticles/Article'
+import {WindowContext} from '../../WindowContext.js'
 
 export default class ESocialSponsorship extends Article {
     IMAGE_PATH = './images/'
@@ -44,27 +45,44 @@ export default class ESocialSponsorship extends Article {
         this.setDynamic(false);
     }
 
+    contentClass(props){
+        return (props.width < props.shrunkWidth) ? 'halfContentShrunk centerCentered' : 'halfContent'
+      }
+
     render(){
         return(
             <div className='esocialSponsor'>
-                <Grid>
-                    <GridRow>
-                        <GridColumn width ={10}>
-                            {this.handleMap()}
-                        </GridColumn>
-                        <GridColumn width={6}>
+
+
+                <WindowContext.Consumer>
+                    {(props) => {
+                        return(
                             <Grid>
                                 <GridRow>
-                                    <Image src={require(this.IMAGE_PATH+'pod.jpg')}/>
+                                    <div className={this.contentClass(props)}>
+                                        <Segment>
+                                            {this.handleMap()}
+                                        </Segment>
+
+                                    </div>
+                                    
+                                    <div className={this.contentClass(props)}>
+                                        <Segment className = ''>
+                                            <Image size = 'large' className='centerCentered' src={require(this.IMAGE_PATH+'pod.jpg')}/>
+                                            </Segment>
+                                            <Segment>
+                                            <Image size= 'large'className='centerCentered' src={require(this.IMAGE_PATH+'twinnies.jpg')}/>
+                                        </Segment>
+                                        
+                                    </div>
+                                        
                                 </GridRow>
-                                <GridRow>
-                                <Image src={require(this.IMAGE_PATH+'twinnies.jpg')}/>
-                                </GridRow>
-                            </Grid>
-                        </GridColumn>
-                    </GridRow>
-                </Grid>
-    
+                        </Grid>
+                    )
+                    }}
+                </WindowContext.Consumer>
+
+
             </div>
         )
     }

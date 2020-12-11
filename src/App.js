@@ -68,3 +68,12 @@ state = { width: 0, height: 0, shrunkWidth: 588 };
 }
 
 export default App;
+
+//sample Context Consumer for Class Component w/in render
+         /*  <WindowContext.Consumer>
+           {(props) => {
+            return(
+               
+            )
+           }}
+           </WindowContext.Consumer> */

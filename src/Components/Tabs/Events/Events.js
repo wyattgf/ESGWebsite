@@ -10,7 +10,7 @@ export default class Events extends SideBarMenu {
 
   tabMap = new Map([
     ['E-Socials', <Segment><ESocials/></Segment>],
-    ['E-Social Sponsorship', <Segment><ESocialSponsorship/></Segment>],
+    ['E-Social Sponsorship', <ESocialSponsorship/>],
     ['E-Picnics', <Segment><EPicnics/></Segment>],
     ['E-Ball', <Segment><EBall/></Segment>],
 ])
