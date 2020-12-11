@@ -49,6 +49,7 @@ export default class ESocialSponsorship extends Article {
         return (props.width < props.shrunkWidth) ? 'halfContentShrunk centerCentered' : 'halfContent'
       }
 
+
     render(){
         return(
             <div className='esocialSponsor'>
