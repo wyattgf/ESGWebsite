@@ -4,9 +4,18 @@ import {WindowContext} from '../../../WindowContext'
 
 export default class Article extends Component {
     sections = new Map();
+    dynamic = true;
+
+    setDynamic(bo){
+        this.dynamic = bo;
+    }
 
     setSections(map){
         this.sections = map;
+    }
+
+    setWidth(context){
+        return this.dynamic ? context.width/2 : ''
     }
 
   
@@ -14,7 +23,7 @@ export default class Article extends Component {
        var  bullets = []
         for (var i = 0; i < responsibilities.length;i++){
             bullets[i] = (
-                        <List.Item style={{width: context.width/2}} key={i}>
+                        <List.Item style={{width: this.setWidth(context)}} key={i}>
                             {responsibilities[i]}
                         </List.Item>
                     )
@@ -26,7 +35,7 @@ export default class Article extends Component {
        var sections = [];
        var index = 0;
        for (let key of this.sections.keys()){
-            sections[index] = [<h2 key = {key} style={{width: context.width/2}}>{key}</h2>, this.createBullets(this.sections.get(key), context)];
+            sections[index] = [<h2 key = {key} style={{width: this.setWidth(context)}}>{key}</h2>, this.createBullets(this.sections.get(key), context)];
             index+=1;
        }
        return sections;

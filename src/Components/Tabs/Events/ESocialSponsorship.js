@@ -38,9 +38,10 @@ export default class ESocialSponsorship extends Article {
     ])
 
 
-    constructor(){
-        super();
+    constructor(props){
+        super(props);
         this.setSections(this.QUESTIONS);
+        this.setDynamic(false);
     }
 
     render(){
