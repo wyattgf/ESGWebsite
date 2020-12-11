@@ -34,10 +34,10 @@ export default class SideBarMenu extends Component {
   
   
 
-  createMenu(width){
-      var tabs = [];
-      const { activeItem } = this.state;
-      var index = 0;
+  createMenu(props){
+    var tabs = [];
+    const { activeItem } = this.state;
+    var index = 0;
     for (let key of this.tabMap.keys()){
         tabs[index] = (
             <Menu.Item
@@ -45,7 +45,7 @@ export default class SideBarMenu extends Component {
               active={activeItem === key}
               onClick={ e => this.handleClick(key) }
             >
-                <div className={this.menuItemStyle(width)}>
+                <div className={this.menuItemStyle(props)}>
                   {key}
                 </div>
             </Menu.Item>
@@ -53,7 +53,7 @@ export default class SideBarMenu extends Component {
         index+=1;
     }
     tabs = <GridRow>{tabs}</GridRow>
-    return ( (width<this.SHRUNK_WINDOW_WIDTH) ?
+    return ( (props.width<props.shrunkWidth) ?
         <Menu secondary fluid horizontal>
             {tabs}
         </Menu>
@@ -66,20 +66,17 @@ export default class SideBarMenu extends Component {
     )
   }
 
-  menuItemStyle(width){
-    return (width < this.SHRUNK_WINDOW_WIDTH) ? 'centerCentered' : ''
+  menuItemStyle(props){
+    return (props.width < props.shrunkWidth) ? 'centerCentered' : ''
   }
 
-  sideBarClass(width){
-    console.log(width)
-
-    return (width < this.SHRUNK_WINDOW_WIDTH) ? 'sideBarShrunk centerCentered' : 'sideBar'
+  sideBarClass(props){
+    console.log(props.width)
+    return (props.width < props.shrunkWidth) ? 'sideBarShrunk centerCentered' : 'sideBar'
   }
 
-  sideBarContentClass(width){
-
-
-    return (width < this.SHRUNK_WINDOW_WIDTH) ? 'sideBarShrunk centerCentered' : 'sideBarContent'
+  sideBarContentClass(props){
+    return (props.width < props.shrunkWidth) ? 'sideBarShrunk centerCentered' : 'sideBarContent'
   }
 
   render() {
@@ -91,11 +88,11 @@ export default class SideBarMenu extends Component {
               <Grid>
                 <GridRow className='dynamicRow'>
 
-                <div className={this.sideBarClass(props.width)}>
-                    {this.createMenu(props.width)}
+                <div className={this.sideBarClass(props)}>
+                    {this.createMenu(props)}
                 </div>
                 
-                <div className={this.sideBarContentClass(props.width)}>
+                <div className={this.sideBarContentClass(props)}>
                   {this.state.activeElement}
                 </div>
 

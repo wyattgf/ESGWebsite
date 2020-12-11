@@ -1,14 +1,13 @@
 import React, {useState, useContext} from 'react'
 import { Menu, Icon, Grid } from 'semantic-ui-react'
 import { NavLink } from 'react-router-dom'
-//import WindowContext  from './WindowContext';
+import {WindowContext}  from './WindowContext';
 
 
 
 export default function NavigationBar(){
   const [activeItem, setActiveItem] = useState('Nada');
-  //var window = useContext(WindowContext);
-
+  var [width, shrunkWidth] = [useContext(WindowContext).width, useContext(WindowContext).shrunkWidth];
   const  tabColors = ['red', 'orange', 'green', 'blue','purple']
   const  tabIcons = ['info','birthday cake','home','phone',  'folder open']
   const  tabNames = ['About','Events','Home','Contact', 'Student Resources']
@@ -43,10 +42,14 @@ export default function NavigationBar(){
     return (''+name)
   }
 
+  function navMenuClass(){
+    return (width < shrunkWidth) ? 'navMenuShrunk' : 'navMenu'
+  }
+
   
     return (
       <div className='navBar'>
-      <Menu secondary className="navigationBar">
+      <Menu secondary className={navMenuClass()}>
         <Grid>
         <Grid.Row className='dynamicRow'>
           {createTabs()}

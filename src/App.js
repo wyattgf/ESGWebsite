@@ -11,7 +11,7 @@ import AppRoutes from './Components/AppRoutes.js'
 class App extends React.Component {
 
 
-state = { width: 0, height: 0 };
+state = { width: 0, height: 0, shrunkWidth: 588 };
 
  componentDidMount() {
       this.updateWindowDimensions();

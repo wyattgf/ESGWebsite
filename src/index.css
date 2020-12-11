@@ -187,14 +187,14 @@ List.Item {
   height: 5%;
 }
 
-.navigationBar {
+.navMenuShrunk {
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
 
-.menuItemShrunk {
-  
+.navMenu {
+  display: flex;
+  justify-content: center;
 }
-
 
 
