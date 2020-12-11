@@ -22,9 +22,10 @@ export default function NavigationBar(){
     for (var i = 0; i < tabNames.length; i++){
       tabs[i] = (
         <div className='centerCentered'>
+        <NavLink to={createLink(tabLinks[i])} exact >
         <Menu.Item 
               key = {tabNames[i]}
-              as={NavLink} to={createLink(tabLinks[i])}
+              
               name={tabNames[i]}
               active={activeItem === tabNames[i]}
               onClick={handleItemClick}
@@ -33,6 +34,7 @@ export default function NavigationBar(){
               <Icon name= {tabIcons[i]}/>
               {tabNames[i]}
          </Menu.Item>
+         </NavLink>
          </div>
       )
     }
@@ -40,7 +42,7 @@ export default function NavigationBar(){
   }
 
   function createLink(name){
-    return ('/'+name)
+    return (''+name)
   }
 
   

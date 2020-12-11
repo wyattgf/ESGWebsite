@@ -3,7 +3,7 @@ import './App.css';
 import Footer from './Components/Footer.js'
 import Animation from './Components/Animation.js'
 import {BrowserRouter as Router} from 'react-router-dom';
-import {Grid, GridRow, GridColumn} from 'semantic-ui-react';
+import {Grid, GridRow} from 'semantic-ui-react';
 import { WindowContext } from './Components/WindowContext';
 import NavigationBar from './Components/NavigationBar.js'
 import AppRoutes from './Components/AppRoutes.js'
@@ -56,9 +56,9 @@ state = { width: 0, height: 0 };
         </Router>
         
         <GridRow>
-              <GridColumn >
+              <div className = 'row'>
                   <Footer/>
-              </GridColumn>
+              </div>
         
         </GridRow>
         </WindowContext.Provider>
