@@ -176,7 +176,7 @@ List.Item {
 }
 
 .sideBarShrunk {
-  width: 100%;
+  padding: 1rem;
 }
 
 .sideBarContent{
@@ -185,7 +185,8 @@ List.Item {
 }
 
 .sideBarContentShrunk{
-  width: 100;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 

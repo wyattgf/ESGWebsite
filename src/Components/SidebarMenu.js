@@ -5,12 +5,7 @@ import {WindowContext} from './WindowContext';
 
 
 export default class SideBarMenu extends Component {
-  static contextType = WindowContext
-  wind = {}
-  componentDidMount(){
-    this.wind = this.context
-  }
-
+  SHRUNK_WINDOW_WIDTH = 588;
   tabMap = new Map();
   state = { activeItem: '', activeElement: <div></div>}
     
@@ -39,13 +34,14 @@ export default class SideBarMenu extends Component {
   
   
 
-  createMenu(){
+  createMenu(width){
       var tabs = [];
       const { activeItem } = this.state;
       var index = 0;
     for (let key of this.tabMap.keys()){
         tabs[index] = (
             <Menu.Item
+            className='centerCentered'
               key = {key}
               name= {key}
               active={activeItem === key}
@@ -54,11 +50,30 @@ export default class SideBarMenu extends Component {
         )
         index+=1;
     }
-    return (
+    tabs = <GridRow>{tabs}</GridRow>
+    return ( (width<this.SHRUNK_WINDOW_WIDTH) ?
+        <Menu secondary fluid horizontal>
+            {tabs}
+        </Menu>
+
+        :
+
         <Menu secondary fluid vertical>
             {tabs}
         </Menu>
     )
+  }
+
+  sideBarClass(width){
+    console.log(width)
+
+    return (width < this.SHRUNK_WINDOW_WIDTH) ? 'sideBarShrunk centerCentered' : 'sideBar'
+  }
+
+  sideBarContentClass(width){
+
+
+    return (width < this.SHRUNK_WINDOW_WIDTH) ? 'sideBarShrunk centerCentered' : 'sideBarContent'
   }
 
   render() {
@@ -69,12 +84,12 @@ export default class SideBarMenu extends Component {
             return(
               <Grid>
                 <GridRow className='dynamicRow'>
-                  
-                <div className='sideBar'>
-                    {this.createMenu()}
-                </div>
 
-                <div className='sideBarContent'>
+                <div className={this.sideBarClass(props.width)}>
+                    {this.createMenu(props.width)}
+                </div>
+                
+                <div className={this.sideBarContentClass(props.width)}>
                   {this.state.activeElement}
                 </div>
 
