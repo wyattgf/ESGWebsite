@@ -1,5 +1,5 @@
 import {Grid, GridRow} from 'semantic-ui-react';
-import React, { Component }  from 'react';
+import React, { Component, Segment }  from 'react';
 import "../../../index.css";
 import ExecCard from './ExecCard';
 //import  "../../../data/images";

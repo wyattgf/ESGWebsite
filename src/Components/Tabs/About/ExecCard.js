@@ -15,7 +15,7 @@ export default class ExecCard extends Component {
 
     render(){
         return (
-                <div className='dynamicEl'>
+                <div className='dynamicEl centerCentered'>
                     <Card className='execCard' key = {this.props.name}>
                         <Image alt = {this.props.name} src={require(''+this.validateImage(this.props.image))} wrapped ui={false} />
                         <Card.Content>
