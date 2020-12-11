@@ -87,3 +87,18 @@ export default class EPicnics extends GridColumnSections {
         );
       }
 }
+
+
+
+(
+                    <WindowContext.Consumer>
+                        {(props) => {
+                            return(
+                        <List.Item style={{width: props.width/2}} key={i}>
+                            {responsibilities[i]}
+                        </List.Item>
+                        )
+                        }}
+                    </WindowContext.Consumer>
+
+                    )

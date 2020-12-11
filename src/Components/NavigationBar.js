@@ -7,7 +7,8 @@ import {WindowContext}  from './WindowContext';
 
 export default function NavigationBar(){
   const [activeItem, setActiveItem] = useState('Nada');
-  var [width, shrunkWidth] = [useContext(WindowContext).width, useContext(WindowContext).shrunkWidth];
+  var context = useContext(WindowContext);
+  var [width, shrunkWidth] = [context.width, context.shrunkWidth];
   const  tabColors = ['red', 'orange', 'green', 'blue','purple']
   const  tabIcons = ['info','birthday cake','home','phone',  'folder open']
   const  tabNames = ['About','Events','Home','Contact', 'Student Resources']

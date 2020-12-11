@@ -77,8 +77,8 @@ export default class ArticleTwo extends Article {
     
     ]);
     
-    constructor(){
-        super();
+    constructor(props){
+        super(props);
         this.setSections(this.SECTIONS);
     }
 }

@@ -39,8 +39,8 @@ export default class ArticleFive extends Article {
         ["Section 4.",this.SECTION4]
     ]);
     
-    constructor(){
-        super();
+    constructor(props){
+        super(props);
         this.setSections(this.SECTIONS);
     }
 }
