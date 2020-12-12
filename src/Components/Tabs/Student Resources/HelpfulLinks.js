@@ -1,6 +1,5 @@
 import React from 'react'
 import GridColumnSections from '../../GridColumnSections'
-import {GridColumn} from 'semantic-ui-react'
 
 export default class HelpfulLinks extends GridColumnSections {
     sectionMap = new Map([
@@ -34,12 +33,12 @@ export default class HelpfulLinks extends GridColumnSections {
         var columns = []
         for (let key of this.sectionMap.keys()){
             columns[index] = (
-              <GridColumn key={key} width={Math.round(12/this.originalColumnsPerRow)}>
+              <div className= 'gridColumnRow' key={key} style={{width: Math.round(100/this.changingColumnsPerRow) + '%'}}>
                
-                  <h3><a className={'externalLink headerThree'} target="_blank" rel="noopener noreferrer" href={this.parallelLinks.get(key)}>{key}</a></h3> <br/>
+                  <h3><a className='externalLink headerThree' target="_blank" rel="noopener noreferrer" href={this.parallelLinks.get(key)}>{key}</a></h3> <br/>
                   <div>{this.sectionMap.get(key)}</div>
                  
-              </GridColumn>
+              </div>
             )
             index+=1;
         }

@@ -36,12 +36,12 @@ export default class GridColumnSections extends Component {
     var columns = []
     for (let key of this.sectionMap.keys()){
         columns[index] = (
-          <GridColumn key={key} width={Math.round(12/this.changingColumnsPerRow)}>
+          <div className = 'gridColumnRow' key={key} style={{width: Math.round(100/this.changingColumnsPerRow) + '%'}}>
            
               <h3>{key}</h3> <br/>
               <div>{this.sectionMap.get(key)}</div>
              
-          </GridColumn>
+          </div>
         )
         index+=1;
     }
@@ -57,7 +57,7 @@ export default class GridColumnSections extends Component {
       this.changingColumnsPerRow = this.originalColumnsPerRow;
       this.changingclassNombre = this.originalClassNombre;
     }
-    console.log(this.changingColumnsPerRow)
+
     const columns = this.createColumns();
     var counter = 0;
     var rows = [];
@@ -83,7 +83,7 @@ export default class GridColumnSections extends Component {
         <WindowContext.Consumer>
            {(props) => {
             return(
-                <div className={this.getClassName()}> 
+                <div style={{width: '100%' }}className={this.getClassName()}> 
                   {this.createColumnRows(props)}
                 </div>
             )
