@@ -16,8 +16,8 @@ export default class PartnerWithPratt extends Component {
 
     //who it's being sent to, subject, body, cc (if any), text to display
     EMAILS = [
-        [this.ESG_EMAIL,'Interested in Sponsorsing an E-Social','Hi!  I am FILL_IN_NAME who is interested in sponsorsing an E-Social with ESG.  Please let me know what steps I can take to get this done :)',this.INDUSTRY_RELATIONS, 'Host an E-Social'],
-        [this.ESG_EMAIL,'Interested in Helping Fund Engineering Clubs', 'Hi!  I am a representative of COMPANY_NAME_HERE, and we are interested in helping sponsor an engineering club at Duke.  Please let me know what steps I can take to get this done :)',this.STUDENT_GROUP_LIASION, 'Sponsor a Club'],
+        [this.ESG_EMAIL,'Interested in Sponsoring an E-Social','Hi!  I am a representative of COMPANY_NAME, and we are interested in sponsorsing an E-Social with ESG.  Please let me know what steps I can take to get this done :)',this.INDUSTRY_RELATIONS, 'Host an E-Social'],
+        [this.ESG_EMAIL,'Interested in Helping Fund Engineering Clubs', 'Hi!  I am a representative of COMPANY_NAME, and we are interested in helping sponsor an engineering club at Duke.  Please let me know what steps I can take to get this done :)',this.STUDENT_GROUP_LIASION, 'Sponsor a Club'],
         [this.PRESIDENT, 'Seeking to Speak with ESG Executive President', '',this.ESG_EMAIL, 'Contact our President']
     ]
     emailMap = new Map([
