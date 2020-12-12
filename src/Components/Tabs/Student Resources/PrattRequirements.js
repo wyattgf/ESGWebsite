@@ -14,8 +14,8 @@ export default class PrattRequirements extends GridColumnSections {
   
   ])
 
-    constructor(){
-      super()
+    constructor(props){
+      super(props)
       this.setMap(this.sectionMap);
       this.setColumnsPerRow(2);
     }

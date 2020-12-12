@@ -34,7 +34,7 @@ export default class HelpfulLinks extends GridColumnSections {
         var columns = []
         for (let key of this.sectionMap.keys()){
             columns[index] = (
-              <GridColumn key={key} width={Math.round(12/this.columnsPerRow)}>
+              <GridColumn key={key} width={Math.round(12/this.originalColumnsPerRow)}>
                
                   <h3><a className={'externalLink headerThree'} target="_blank" rel="noopener noreferrer" href={this.parallelLinks.get(key)}>{key}</a></h3> <br/>
                   <div>{this.sectionMap.get(key)}</div>

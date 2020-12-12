@@ -67,11 +67,10 @@ export default class ESocialSponsorship extends Article {
 
                                     </div>
                                     
-                                    <div className={this.contentClass(props)}>
+                                    <div className={this.contentClass(props)+ ' verticalAlign'}>
                                         <Segment className = ''>
                                             <Image size = 'large' className='centerCentered' src={require(this.IMAGE_PATH+'pod.jpg')}/>
-                                            </Segment>
-                                            <Segment>
+                                      
                                             <Image size= 'large'className='centerCentered' src={require(this.IMAGE_PATH+'twinnies.jpg')}/>
                                         </Segment>
                                         

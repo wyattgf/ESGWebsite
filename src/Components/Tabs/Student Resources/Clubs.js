@@ -1,7 +1,7 @@
 import React from 'react'
 import GridColumnSections from '../../GridColumnSections';
 import {Grid, GridRow, Image, Segment} from 'semantic-ui-react';
-
+import {WindowContext} from '../../WindowContext.js'
 
 
 export default class FirstSemesterCourses extends GridColumnSections {
@@ -38,6 +38,13 @@ export default class FirstSemesterCourses extends GridColumnSections {
     
   ])
 
+  sectionMap = new Map([
+    ['Professional Society Chapters',this.createLinks(this.profSocietyChaptersMap)],
+    ['Student Organizations',this.createLinks(this.studentOrgsMap)],
+    ['Honor Societies',this.createLinks(this.honorSocietiesMap)]
+
+  ])
+
   createLinks(map){
       var links = [];
       var index = [];
@@ -49,12 +56,6 @@ export default class FirstSemesterCourses extends GridColumnSections {
       }
       return links;
   }
-  sectionMap = new Map([
-      ['Professional Society Chapters',this.createLinks(this.profSocietyChaptersMap)],
-      ['Student Organizations',this.createLinks(this.studentOrgsMap)],
-      ['Honor Societies',this.createLinks(this.honorSocietiesMap)]
-
-    ])
 
     constructor(){
       super()
@@ -62,33 +63,43 @@ export default class FirstSemesterCourses extends GridColumnSections {
       this.setColumnsPerRow(1);
       this.setClassName('leftCentered');
     }
+
+    contentClass(context){
+      return (context.width < context.shrunkWidth) ? 'halfContentShrunk centerCentered' : 'halfContent'
+    }
   
     render() {
         return (
-          <div className={this.classNombre}> 
-            <Grid>
-                <GridRow className='dynamicRow'>
-
-                   <div className = 'dynamicEl'>
-                    <Segment style={{maxWidth: "500px"}}>
-                          <h2 className='centerCentered'>Links</h2>
-                          {this.createColumnRows()}
+          <WindowContext.Consumer>
+           {(props) => {
+            return(
+              <div className={this.originalClassNombre}> 
+              <Grid>
+                  <GridRow className='dynamicRow'>
+  
+                     <div className = {this.contentClass(props)}>
+                      <Segment>
+                            <h2 className='centerCentered'>Links</h2>
+                            {this.createColumnRows(props)}
+                        </Segment>
+                     </div>
+                      
+                     
+                     <div className = {this.contentClass(props)+ ' verticalAlign'}>
+                      <Segment >
+                        <Image alt='Duke Motorsports' size ='big' centered src={require("" + this.IMAGES_PATH + 'motorsports.jpg')}/> 
+                        <Image alt='Duke Robotics' size ='big' centered src={require("" + this.IMAGES_PATH + 'robotics.jpg')}/>
                       </Segment>
-                   </div>
-                    
-                   
-                   <div className = 'dynamicEl'>
-                    <Segment style={{maxWidth: "500px"}}>
-                      <Image alt='Duke Motorsports' size ='big' centered src={require("" + this.IMAGES_PATH + 'motorsports.jpg')}/> 
-                      <Image alt='Duke Robotics' size ='big' centered src={require("" + this.IMAGES_PATH + 'robotics.jpg')}/>
-                    </Segment>
-                    </div>     
-                   
-                   
-                </GridRow>
-               
-            </Grid>
-          </div>
+                      </div>     
+                     
+                     
+                  </GridRow>
+                 
+              </Grid>
+            </div>
+            )
+           }}
+           </WindowContext.Consumer>
         );
       }
     

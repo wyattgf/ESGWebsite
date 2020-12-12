@@ -1,27 +1,34 @@
 import React, { Component } from 'react'
 import {Grid, GridColumn, GridRow} from 'semantic-ui-react';
+import {WindowContext} from './WindowContext'
 
 
 
 export default class GridColumnSections extends Component {
   sectionMap = new Map();
-  columnsPerRow = 1;
-  classNombre = 'leftCentered'
+  originalColumnsPerRow = 1;
+  changingColumnsPerRow = 1;
+  originalClassNombre = 'leftCentered'
+  changingclassNombre = 'leftCentered'
 
   setMap(map){
     this.sectionMap = map;
   }
 
   setColumnsPerRow(perRow){
-      this.columnsPerRow = perRow;
+      this.originalColumnsPerRow = perRow;
   }
 
   setClassName(className){
-    this.classNombre = className;
+    this.originalClassNombre = className;
+  }
+
+  setChangingClassName(className){
+    this.changingclassNombre = className;
   }
 
   getClassName(){
-    return this.classNombre;
+    return this.changingclassNombre;
   }
 
   createColumns(){
@@ -29,7 +36,7 @@ export default class GridColumnSections extends Component {
     var columns = []
     for (let key of this.sectionMap.keys()){
         columns[index] = (
-          <GridColumn key={key} width={Math.round(12/this.columnsPerRow)}>
+          <GridColumn key={key} width={Math.round(12/this.changingColumnsPerRow)}>
            
               <h3>{key}</h3> <br/>
               <div>{this.sectionMap.get(key)}</div>
@@ -41,17 +48,26 @@ export default class GridColumnSections extends Component {
     return columns;
   }
 
-  createColumnRows(){
-    var columns = this.createColumns();
+  createColumnRows(context){
+    if (context.width < context.shrunkWidth){
+      this.changingColumnsPerRow = 1;
+      this.setChangingClassName('centerCentered')
+    }
+    else {
+      this.changingColumnsPerRow = this.originalColumnsPerRow;
+      this.changingclassNombre = this.originalClassNombre;
+    }
+    console.log(this.changingColumnsPerRow)
+    const columns = this.createColumns();
     var counter = 0;
     var rows = [];
 
-    for (var i = 0; i < columns.length; i+=this.columnsPerRow){
+    for (var i = 0; i < columns.length; i+=this.changingColumnsPerRow){
   
       rows[counter] = (
         
         <GridRow key={counter}>
-          {columns.slice(i,i+this.columnsPerRow)}
+          {columns.slice(i,i+this.changingColumnsPerRow)}
         </GridRow>
       )
       counter+=1;
@@ -61,11 +77,20 @@ export default class GridColumnSections extends Component {
 
  
     render() {
-        return (
-          <div className={this.getClassName()}> 
-           {this.createColumnRows()}
-          </div>
-        );
+      return(
+        <div>
+
+        <WindowContext.Consumer>
+           {(props) => {
+            return(
+                <div className={this.getClassName()}> 
+                  {this.createColumnRows(props)}
+                </div>
+            )
+           }}
+           </WindowContext.Consumer>
+           </div>
+      )
       }
     
 }
