@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {Grid, GridColumn, GridRow} from 'semantic-ui-react';
+import {Grid, GridRow} from 'semantic-ui-react';
 import {WindowContext} from './WindowContext'
 
 

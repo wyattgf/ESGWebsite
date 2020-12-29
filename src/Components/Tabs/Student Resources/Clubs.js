@@ -50,7 +50,7 @@ export default class FirstSemesterCourses extends GridColumnSections {
       var index = [];
       for (let key of map.keys()){
         links[index] = (
-           <div><a className = 'externalLink' target="_blank" rel="noopener noreferrer" href={map.get(key)}>{key}</a><br/></div>
+           <div key={key}><a  className = 'externalLink' target="_blank" rel="noopener noreferrer" href={map.get(key)}>{key}</a><br/></div>
         )
         index+=1;
       }

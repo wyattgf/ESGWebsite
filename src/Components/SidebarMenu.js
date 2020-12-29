@@ -71,7 +71,6 @@ export default class SideBarMenu extends Component {
   }
 
   sideBarClass(props){
-    console.log(props.width)
     return (props.width < props.shrunkWidth) ? 'sideBarShrunk centerCentered' : 'sideBar'
   }
 

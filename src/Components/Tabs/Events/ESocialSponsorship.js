@@ -34,7 +34,7 @@ export default class ESocialSponsorship extends Article {
         ['What are the logistics?', this.LOGISTICS],
         ['What is the cost of hosting?', this.HOSTING_COST],
         ['How can you be involved?', this.INVOLVED],
-        ['ESG looks forward to working with you!', []]
+        ['ESG looks forward to working with you!', ['']]
 
     ])
 
@@ -58,9 +58,9 @@ export default class ESocialSponsorship extends Article {
                 <WindowContext.Consumer>
                     {(props) => {
                         return(
-                            <Grid>
-                                <GridRow>
-                                    <div className={this.contentClass(props)}>
+                            <Grid >
+                                <GridRow >
+                                    <div  className={this.contentClass(props)}>
                                         <Segment>
                                             {this.handleMap()}
                                         </Segment>

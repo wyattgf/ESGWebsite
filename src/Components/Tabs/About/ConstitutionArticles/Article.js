@@ -5,6 +5,7 @@ import {WindowContext} from '../../../WindowContext'
 export default class Article extends Component {
     sections = new Map();
     dynamic = true;
+    sectionCount = 0;
 
     setDynamic(bo){
         this.dynamic = bo;
@@ -28,7 +29,8 @@ export default class Article extends Component {
                         </List.Item>
                     )
         }
-        return <List ordered>{bullets}</List>;
+        this.sectionCount += 1;
+        return <List key = {responsibilities[0]} ordered>{bullets}</List>;
     }
     
    handleMap(context){
