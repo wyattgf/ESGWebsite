@@ -25,7 +25,7 @@ export default function Home () {
       }
 
         return(
-            <div className = 'tabContent' >
+            <div className = 'homeTab' >
                     <Grid>
                         <GridRow>
                             <div className = {contentClass()}>
