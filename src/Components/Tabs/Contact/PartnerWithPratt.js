@@ -3,9 +3,9 @@ import {Segment, Button, GridRow, Grid} from 'semantic-ui-react'
 
 export default class PartnerWithPratt extends Component {
     ESG_EMAIL = 'esgduke@gmail.com';
-    INDUSTRY_RELATIONS = 'matthew.jaynes@duke.edu';
-    STUDENT_GROUP_LIASION = 'nikita.suri@duke.edu';
-    PRESIDENT = 'polin.liu@duke.edu';
+    INDUSTRY_RELATIONS = 'sebastian.williams@duke.edu';
+    STUDENT_GROUP_LIASION = 'alanna.peykar@duke.edu';
+    PRESIDENT = 'emma.steadman@duke.edu';
 
     SUMMARY = [
         'Getting involved with ESG a great way to publicize your company, connect with Duke engineers, and',
@@ -29,7 +29,7 @@ export default class PartnerWithPratt extends Component {
     CONTENT = [
         'Our general contact email is esgduke@gmail.com',
         'You can also contact individual board members',
-        'as well as the ESG President, Polin Liu Email: polin.liu [at] duke.edu'
+        'as well as the ESG President, Emma Steadman Email: emma.steadman [at] duke.edu'
     ]
 
     createEmail(info){

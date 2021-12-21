@@ -6,7 +6,7 @@ export default class ContactContent extends Component {
     CONTENT = [
         'Our general contact email is esgduke@gmail.com',
         'You can also contact individual board members',
-        'as well as the ESG President, Polin Liu Email: polin.liu [at] duke.edu'
+        'as well as the ESG President, Emma Steadman Email: emma.steadman [at] duke.edu'
     ]
   render() {
  
