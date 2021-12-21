@@ -20,11 +20,11 @@ export default class FirstSemesterCourses extends GridColumnSections {
   ])
 
   studentOrgsMap = new Map([
-    ['Combat Robotics','https://colab.duke.edu/projects/combatrobots'],
-    ['Design for America (DFA)','facebook.com/DFADuke'],
-    ['Duke Conservation Tech','dukeblueprint.com'],
-    ['Duke Electric Vehicles (DEV)','http://www.duke-ev.org/'],
-    ['DukEngineer Magazine','https://pratt.duke.edu/about/news/dukengineer'],
+    //['Combat Robotics','https://colab.duke.edu/projects/combatrobots'],
+    //['Design for America (DFA)','facebook.com/DFADuke'],
+    //['Duke Conservation Tech','dukeblueprint.com'],
+    //['Duke Electric Vehicles (DEV)','http://www.duke-ev.org/'],
+    //['DukEngineer Magazine','https://pratt.duke.edu/about/news/dukengineer'],
     ['Duke Engineers for International Development (DEID)','https://sites.duke.edu/deid/'],
     ['Duke Hyperloop','https://www.dukehyperloop.com/'],
     ['Duke Motorsports','http://dukemotorsports.blogspot.com/'],
@@ -37,13 +37,13 @@ export default class FirstSemesterCourses extends GridColumnSections {
     ['Engineering World Health','https://globalhealth.duke.edu/projects/duke-engineering-world-health'],
     ['Females Excelling More in Math, Engineering & Science (FEMMES+)','sites.duke.edu/femmes'],
     ['Girls Engineering Change','facebook.com/DukeGEC'],
-    ['HackDuke','https://hackduke.org/'],
-    ['Innoworks','facebook.com/dukeinnoworks'],
-    ['MEDesign','https://sites.duke.edu/medesign/'],
-    ['Project Tadpole','https://dukegroups.com/tadpole/home/'],
-    ['Runway of Dreams at Duke','https://www.runwayofdreams.org/'],
-    ['Smarthome','http://smarthome.duke.edu/'],
-    ['Tech For Equity','https://www.dukeaml.com/techforequity'],
+    //['HackDuke','https://hackduke.org/'],
+    //['Innoworks','facebook.com/dukeinnoworks'],
+    //['MEDesign','https://sites.duke.edu/medesign/'],
+    //['Project Tadpole','https://dukegroups.com/tadpole/home/'],
+    //['Runway of Dreams at Duke','https://www.runwayofdreams.org/'],
+    //['Smarthome','http://smarthome.duke.edu/'],
+    //['Tech For Equity','https://www.dukeaml.com/techforequity'],
   ])
 
   honorSocietiesMap = new Map([
@@ -63,10 +63,11 @@ export default class FirstSemesterCourses extends GridColumnSections {
 
   createLinks(map){
       var links = [];
-      var index = [];
+      var index = 0;
       for (let key of map.keys()){
         links[index] = (
            <div key={key}><a  className = 'externalLink' target="_blank" rel="noopener noreferrer" href={map.get(key)}>{key}</a><br/></div>
+           //<div key={key}>{key}</div>
         )
         index+=1;
       }
