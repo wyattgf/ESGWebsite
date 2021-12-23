@@ -9,7 +9,7 @@ export default class FirstSemesterCourses extends GridColumnSections {
 
   profSocietyChaptersMap = new Map([
       ['American Institute of Aeronautics and Astronautics (AIAA)','https://sites.duke.edu/aero/'],
-      ['Academy for Model Aeronautics (AMA)','sites.duke.edu/dukeama'],
+      ['Academy for Model Aeronautics (AMA)','https://sites.duke.edu/dukeama'],
       ['American Society of Civil Engineers (ASCE)','https://dukeasce.wordpress.com/'],
       ['American Society of Mechanical Engineers (ASME)','https://sites.duke.edu/asmeduke/'],
       ['Biomedical Engineering Society (BMES)','http://bmes.pratt.duke.edu/'],
@@ -20,11 +20,11 @@ export default class FirstSemesterCourses extends GridColumnSections {
   ])
 
   studentOrgsMap = new Map([
-    //['Combat Robotics','https://colab.duke.edu/projects/combatrobots'],
-    //['Design for America (DFA)','facebook.com/DFADuke'],
-    //['Duke Conservation Tech','dukeblueprint.com'],
-    //['Duke Electric Vehicles (DEV)','http://www.duke-ev.org/'],
-    //['DukEngineer Magazine','https://pratt.duke.edu/about/news/dukengineer'],
+    ['Combat Robotics','https://colab.duke.edu/projects/combatrobots'],
+    ['Design for America (DFA)','https://facebook.com/DFADuke'],
+    ['Duke Conservation Tech','http://dukeblueprint.com'],
+    ['Duke Electric Vehicles (DEV)','http://www.duke-ev.org/'],
+    ['DukEngineer Magazine','https://pratt.duke.edu/about/news/dukengineer'],
     ['Duke Engineers for International Development (DEID)','https://sites.duke.edu/deid/'],
     ['Duke Hyperloop','https://www.dukehyperloop.com/'],
     ['Duke Motorsports','http://dukemotorsports.blogspot.com/'],
@@ -35,15 +35,15 @@ export default class FirstSemesterCourses extends GridColumnSections {
     ['eNable','https://dukeenable.wordpress.com/'],
     //['E-Team (Peer Pratt Advising Team)','https://pratt.duke.edu/undergrad/students/advising/e-team'],
     ['Engineering World Health','https://globalhealth.duke.edu/projects/duke-engineering-world-health'],
-    ['Females Excelling More in Math, Engineering & Science (FEMMES+)','sites.duke.edu/femmes'],
-    ['Girls Engineering Change','facebook.com/DukeGEC'],
-    //['HackDuke','https://hackduke.org/'],
-    //['Innoworks','facebook.com/dukeinnoworks'],
-    //['MEDesign','https://sites.duke.edu/medesign/'],
-    //['Project Tadpole','https://dukegroups.com/tadpole/home/'],
-    //['Runway of Dreams at Duke','https://www.runwayofdreams.org/'],
-    //['Smarthome','http://smarthome.duke.edu/'],
-    //['Tech For Equity','https://www.dukeaml.com/techforequity'],
+    ['Females Excelling More in Math, Engineering & Science (FEMMES+)','https://sites.duke.edu/femmes'],
+    ['Girls Engineering Change','https://facebook.com/DukeGEC'],
+    ['HackDuke','https://hackduke.org/'],
+    ['Innoworks','https://facebook.com/dukeinnoworks'],
+    ['MEDesign','https://sites.duke.edu/medesign/'],
+    ['Project Tadpole','https://dukegroups.com/tadpole/home/'],
+    ['Runway of Dreams at Duke','https://www.runwayofdreams.org/'],
+    ['Smarthome','http://smarthome.duke.edu/'],
+    ['Tech For Equity','https://www.dukeaml.com/techforequity'],
   ])
 
   honorSocietiesMap = new Map([
