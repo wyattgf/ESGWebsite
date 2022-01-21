@@ -2,15 +2,15 @@ import React, { Component } from 'react'
 
 export default class EBall extends Component {
     CONTENT = [
-        "E-Ball has been CANCELLED due to the effects of COVID-19.  ESG is currently working diligently to determine the most efficient and effective way to refund the cost of E-Ball tickets to those who have paid."
+        "E-Ball is BACK ON for Spring 2022!"
     ]
 
     CONTENT2 = [
-        "More information will be provided as the situation develops.  We appreciate your understanding in this difficult time."
+        "Stay tuned for more information about ticketing, guests, and venue as they come!"
     ]
 
     CONTENT3 = [
-        'ESG wishes you and your loved ones the best of health.'
+        ':)'
     ]
     render(){
         return(
