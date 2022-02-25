@@ -11,8 +11,8 @@ execBoardCards = [];
 //template {"name":"","graduation":-1,"title":"","email":"","fact":"","image":""},
     
  execBoard = [
-    {"name":"Emma Steadman","graduation":2022,"title":"Executive President","email":"emma.steadman@duke.edu","fact":"Grew up with Niagra Falls in her backyard","image":"emmasteadman.jpg"},
-    {"name":"Nikita Suri","graduation":2023,"title":"Executive Vice President","email":"nikita.suri@duke.edu","fact":"From FL<<<<","image":"nikitasuri.png"},
+   //{"name":"Emma Steadman","graduation":2022,"title":"Executive President","email":"emma.steadman@duke.edu","fact":"Grew up with Niagra Falls in her backyard","image":"emmasteadman.jpg"},
+    {"name":"Nikita Suri","graduation":2023,"title":"Executive President","email":"nikita.suri@duke.edu","fact":"From FL<<<<","image":"nikitasuri.png"},
     {"name":"Ben Perry","graduation":2024,"title":"Chief Financial Officer","email":"benjamin.perry@duke.edu","fact":"Will consistently forget your new-member getting-to-know-you coffee chat", "image":"benperry.png"},
     {"name":"Alanna Peykar","graduation":2024,"title":"Student Group Liason","email":"alanna.peykar@duke.edu","fact":"Is DROPPING Pratt :(","image":""},
     {"name":"Jack Rhodes","graduation":2024,"title":"Secretary","email":"jsr73@duke.edu","fact":"Was much taller in person than I expected","image":"jackrhodes.jpg"},
