@@ -10,7 +10,7 @@ export default class EBall extends Component {
     ]
 
     CONTENT3 = [
-        ':)'
+        "Planned Date: March 26, 2022"
     ]
     render(){
         return(
