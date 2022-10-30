@@ -27,7 +27,6 @@ execBoardCards = [];
     {"name":"Emily Yagoda","graduation":2025,"title":"Class of 2025 President","email":"emily.yagoda@duke.edu","fact":"Wild guess but I'm sure she has her own 3D printer at her house","image":"emilyyagoda.jpg"},
     {"name":"Kate Stutheit","graduation":2026,"title":"Class of 2026 President","email":"kate.stutheit@duke.edu","fact":"Beat the other 3 class of 2026 exec in hand to hand combat to acquire the role of '26 president","image":"woman.png"},
     {"name":"Dennis Dale","graduation":2026,"title":"Class of 2026 Representative","email":"dennis.dale@duke.edu","fact":"Related to Doug Dimmadome Owner of the Dimmsdale Dimmadome", "image":"dunktank.png"},
-    
     {"name":"Josh Guthrie","graduation":2026,"title":"Director of Industry Relations","email":"josh.guthrie@duke.edu","fact":"The rie in his last name is silent","image":"lankster.png"},
     {"name":"Pranav Mukund","graduation":2026,"title":"Class of 2026 Representative","email":"pranav.mukund@duke.edu","fact":"Durian is his favorite fruit!", "image":"durianboy.jpeg"},
     
