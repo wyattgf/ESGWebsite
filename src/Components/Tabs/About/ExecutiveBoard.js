@@ -28,7 +28,7 @@ execBoardCards = [];
     {"name":"Dennis Dale","graduation":2026,"title":"Deputy Treasurer","email":"dennis.dale@duke.edu","fact":"Related to Doug Dimmadome Owner of the Dimmsdale Dimmadome", "image":"dunktank.png"},
     {"name":"Josh Guthrie","graduation":2026,"title":"Director of Industry Relations","email":"josh.guthrie@duke.edu","fact":"The rie in his last name is silent","image":"lankster.png"},
     {"name":"Pranav Mukund","graduation":2026,"title":"Director of Special Events","email":"pranav.mukund@duke.edu","fact":"Durian is his favorite fruit!", "image":"durianboy.jpeg"},
-    {"name":"Brandon Lu","graduation":2025,"title":"Chief Marketing Officer","email":"brandon.lu@duke.edu","fact":"Professional inter","image":"brandonlu2.png"},
+    {"name":"Brandon Lu","graduation":2025,"title":"Chief Marketing Officer","email":"brandon.lu@duke.edu","fact":"Professional inter.","image":"brandonlu2.png"},
     
 ]
 
