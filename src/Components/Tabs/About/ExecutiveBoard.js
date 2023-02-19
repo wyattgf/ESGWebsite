@@ -20,7 +20,6 @@ execBoardCards = [];
     {"name":"Emily Shao","graduation":2024,"title":"Chief Financial Officer","email":"emily.shao@duke.edu","fact":"Told me to take ESG more seriously", "image":"emilyshao.png"},
     {"name":"Long Nguyen","graduation":2025,"title":"Student Group Liason","email":"long.t.nguyen@duke.edu","fact":"I like his crewneck in this picture","image":"longnguyen.png"},
     //{"name":"Wyatt Focht","graduation":2023,"title":"Director of Technology and Communications","email":"wgf6@duke.edu","fact":"GREAT at coming up with fun facts","image":"wyattfocht.png"},
-    {"name":"Brandon Lu","graduation":2025,"title":"Chief Marketing Officer","email":"brandon.lu@duke.edu","fact":"Professional inter","image":"brandonlu2.png"},
     //{"name":"Bennett David","graduation":2022,"title":"Class of 2022 President","email":"bennett.david@duke.edu","fact":"Told the freshman that Trinity could vote for ESG","image":"bennettdavid.png"},
     {"name":"James Zheng","graduation":2023,"title":"Class of 2023 President","email":"james.zheng@duke.edu","fact":"I told him he looked beautiful in this picture and he left me on read...","image":"ZHENGPEG.png"},
     {"name":"Vivian Su","graduation":2024,"title":"Class of 2024 President","email":"vivian.su@duke.edu","fact":"Seems to like SWE more than ESG","image":"viviansu.JPEG"},
@@ -29,6 +28,7 @@ execBoardCards = [];
     {"name":"Dennis Dale","graduation":2026,"title":"Deputy Treasurer","email":"dennis.dale@duke.edu","fact":"Related to Doug Dimmadome Owner of the Dimmsdale Dimmadome", "image":"dunktank.png"},
     {"name":"Josh Guthrie","graduation":2026,"title":"Director of Industry Relations","email":"josh.guthrie@duke.edu","fact":"The rie in his last name is silent","image":"lankster.png"},
     {"name":"Pranav Mukund","graduation":2026,"title":"Director of Special Events","email":"pranav.mukund@duke.edu","fact":"Durian is his favorite fruit!", "image":"durianboy.jpeg"},
+    {"name":"Brandon Lu","graduation":2025,"title":"Chief Marketing Officer","email":"brandon.lu@duke.edu","fact":"Professional inter","image":"brandonlu2.png"},
     
 ]
 
